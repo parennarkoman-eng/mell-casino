@@ -36,9 +36,9 @@
   /* INTRO AD */
   #introAdOverlay{position:fixed;inset:0;z-index:90000;background:rgba(5,2,15,.88);backdrop-filter:blur(22px);display:none;align-items:center;justify-content:center;flex-direction:column;gap:18px;}
   #introAdOverlay.visible{display:flex;}
-  .intro-ad-label{font-family:'Bebas Neue',cursive;font-size:28px;letter-spacing:6px;color:var(--purple-light);text-shadow:0 0 20px rgba(139,92,246,.6);text-align:center;}
+  .intro-ad-label{font-family:'Exo 2',sans-serif;font-size:28px;font-weight:900;letter-spacing:4px;color:var(--purple-light);text-shadow:0 0 20px rgba(139,92,246,.8);text-align:center;text-transform:uppercase;}
   .intro-ad-img{width:min(700px,90vw);max-height:70vh;border-radius:14px;border:1px solid rgba(139,92,246,.4);box-shadow:0 0 60px rgba(139,92,246,.3);display:block;object-fit:contain;background:rgba(0,0,0,.45);}
-  .intro-ad-btn{padding:14px 50px;border-radius:12px;border:1px solid rgba(139,92,246,.5);background:linear-gradient(135deg,rgba(139,92,246,.3),rgba(109,40,217,.2));color:var(--purple-light);font-family:'Bebas Neue',cursive;font-size:24px;letter-spacing:4px;cursor:pointer;transition:all .2s;}
+  .intro-ad-btn{padding:14px 50px;border-radius:12px;border:1px solid rgba(139,92,246,.5);background:linear-gradient(135deg,rgba(139,92,246,.3),rgba(109,40,217,.2));color:var(--purple-light);font-family:'Russo One',sans-serif;font-size:24px;letter-spacing:2px;text-transform:uppercase;cursor:pointer;transition:all .2s;}
   .intro-ad-btn:hover{box-shadow:0 0 40px rgba(139,92,246,.4);transform:translateY(-2px);}
   .intro-ad-close{position:absolute;top:20px;right:24px;background:rgba(139,92,246,.1);border:1px solid rgba(139,92,246,.3);border-radius:50%;width:32px;height:32px;color:rgba(255,255,255,.7);font-size:14px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .2s;}
 
@@ -174,17 +174,15 @@
   .push-notif-close{background:none;border:none;color:rgba(255,255,255,.3);cursor:pointer;font-size:14px;padding:0;flex-shrink:0;}
 
   /* DODEP */
-  .dodep-page{display:flex;flex-direction:row;align-items:flex-start;justify-content:center;min-height:calc(100vh - 90px);gap:40px;padding:40px 30px;flex-wrap:wrap;}
-  .dodep-left{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px;flex:1;min-width:280px;}
-  .dodep-title{font-family:'Bebas Neue',cursive;font-size:clamp(40px,8vw,80px);letter-spacing:10px;background:linear-gradient(90deg,#7c3aed,#a78bfa,#fff,#a78bfa,#7c3aed);-webkit-background-clip:text;-webkit-text-fill-color:transparent;text-align:center;}
-  .dodep-balance{font-family:'Russo One',sans-serif;font-size:22px;color:var(--purple-light);letter-spacing:2px;text-align:center;}
-  .dodep-btn{width:min(300px,80vw);height:min(300px,80vw);border-radius:50%;background:radial-gradient(circle at 35% 35%,rgba(167,139,250,.3),rgba(109,40,217,.15));border:2px solid rgba(139,92,246,.5);color:var(--purple-light);font-family:'Bebas Neue',cursive;font-size:clamp(28px,6vw,48px);letter-spacing:4px;cursor:pointer;transition:all .15s;box-shadow:0 0 40px rgba(139,92,246,.2);text-shadow:0 0 20px rgba(139,92,246,.6);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;user-select:none;}
+  .dodep-page{display:grid;grid-template-columns:minmax(280px,1fr) minmax(260px,340px);gap:18px;align-items:start;padding:24px 16px 32px;max-width:1060px;margin:0 auto;min-height:calc(100vh - 90px);}
+  .dodep-left,.dodep-right{background:rgba(12,7,30,.74);border:1px solid rgba(167,139,250,.16);border-radius:14px;padding:20px;backdrop-filter:blur(18px);box-shadow:0 20px 60px rgba(0,0,0,.28);}
+  .dodep-title{font-family:'Exo 2',sans-serif;font-weight:900;font-size:clamp(38px,6vw,62px);letter-spacing:2px;text-transform:uppercase;background:linear-gradient(90deg,#7c3aed,#a78bfa,#fff,#a78bfa,#7c3aed);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-size:400%;animation:logoShift 6s linear infinite;text-align:center;}
+  .dodep-btn{width:min(250px,74vw);height:min(250px,74vw);border-radius:22px;border:2px solid rgba(139,92,246,.5);background:linear-gradient(135deg,rgba(139,92,246,.28),rgba(109,40,217,.12));color:var(--purple-light);font-family:'Russo One',sans-serif;font-size:clamp(22px,4vw,34px);letter-spacing:1px;cursor:pointer;transition:all .15s;box-shadow:0 0 40px rgba(139,92,246,.2);text-shadow:0 0 20px rgba(139,92,246,.6);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;user-select:none;}
   .dodep-btn:hover{transform:scale(1.04);}
   .dodep-btn:active{transform:scale(.96);}
-  .dodep-btn .btn-icon{font-size:clamp(40px,8vw,70px);display:block;}
+  .dodep-btn .btn-icon{font-size:34px;display:block;}
   .dodep-info{font-size:13px;color:rgba(167,139,250,.4);letter-spacing:2px;text-transform:uppercase;text-align:center;}
-  .dodep-right{display:flex;flex-direction:column;align-items:center;gap:16px;min-width:240px;padding-top:20px;}
-  .dodep-shop-title{font-family:'Bebas Neue',cursive;font-size:22px;letter-spacing:5px;color:rgba(167,139,250,.5);text-align:center;}
+  .dodep-shop-title{font-family:'Russo One',sans-serif;letter-spacing:2px;font-size:22px;color:rgba(167,139,250,.5);text-align:center;}
   .mell-card{background:var(--card-bg);border:1px solid rgba(139,92,246,.2);border-radius:18px;padding:20px 22px;display:flex;flex-direction:column;align-items:center;gap:12px;transition:all .3s;position:relative;overflow:hidden;}
   .mell-card.owned{border-color:rgba(139,92,246,.5);box-shadow:0 0 30px rgba(139,92,246,.2);}
   .mell-video-wrap{width:180px;height:180px;border-radius:12px;overflow:hidden;position:relative;background:rgba(0,0,0,.5);border:2px solid rgba(139,92,246,.2);}
@@ -196,29 +194,29 @@
   .mell-income-badge{position:absolute;top:8px;left:50%;transform:translateX(-50%);background:rgba(0,0,0,.8);border:1px solid rgba(139,92,246,.5);border-radius:20px;padding:4px 14px;font-family:'Russo One',sans-serif;font-size:13px;color:var(--purple-light);white-space:nowrap;display:none;animation:incomePulse 1.5s ease-in-out infinite alternate;}
   .mell-income-badge.visible{display:block;}
   @keyframes incomePulse{from{opacity:.7}to{opacity:1}}
-  .mell-card-name{font-family:'Bebas Neue',cursive;font-size:24px;letter-spacing:4px;color:rgba(167,139,250,.5);transition:color .3s;}
+  .mell-card-name{font-family:'Russo One',sans-serif;letter-spacing:2px;font-size:24px;color:rgba(167,139,250,.5);transition:color .3s;}
   .mell-card.owned .mell-card-name{color:var(--purple-light);text-shadow:0 0 15px rgba(139,92,246,.5);}
-  .mell-buy-btn{width:100%;padding:11px;border-radius:10px;border:1px solid rgba(139,92,246,.4);background:linear-gradient(135deg,rgba(139,92,246,.2),rgba(109,40,217,.1));color:var(--purple-light);font-family:'Bebas Neue',cursive;font-size:18px;letter-spacing:2px;cursor:pointer;transition:all .2s;}
+  .mell-buy-btn{width:100%;padding:11px;border-radius:10px;border:1px solid rgba(139,92,246,.4);background:linear-gradient(135deg,rgba(139,92,246,.2),rgba(109,40,217,.1));color:var(--purple-light);font-family:'Russo One',sans-serif;font-size:13px;letter-spacing:1px;cursor:pointer;transition:all .2s;}
   .mell-buy-btn:hover{box-shadow:0 0 20px rgba(139,92,246,.3);transform:translateY(-1px);}
   .mell-buy-btn:disabled{opacity:.4;cursor:not-allowed;transform:none;}
   .mell-owned-label{font-family:'Russo One',sans-serif;font-size:12px;letter-spacing:2px;color:rgba(139,92,246,.7);text-transform:uppercase;display:none;}
   .mell-card.owned .mell-owned-label{display:block;}
   .mell-card.owned .mell-buy-btn{display:none;}
-  /* UPGRADE */
   .mell-upgrade-section{width:100%;display:none;flex-direction:column;gap:8px;margin-top:4px;}
   .mell-card.owned .mell-upgrade-section{display:flex;}
   .mell-upgrade-info{font-size:11px;color:rgba(167,139,250,.5);text-align:center;letter-spacing:1px;}
-  .mell-upgrade-btn{width:100%;padding:10px;border-radius:10px;border:1px solid rgba(251,191,36,.5);background:linear-gradient(135deg,rgba(251,191,36,.2),rgba(180,130,0,.1));color:#fbbf24;font-family:'Bebas Neue',cursive;font-size:17px;letter-spacing:2px;cursor:pointer;transition:all .2s;}
+  .mell-upgrade-btn{width:100%;padding:10px;border-radius:10px;border:1px solid rgba(251,191,36,.5);background:linear-gradient(135deg,rgba(251,191,36,.2),rgba(180,130,0,.1));color:#fbbf24;font-family:'Russo One',sans-serif;font-size:13px;letter-spacing:1px;cursor:pointer;transition:all .2s;}
   .mell-upgrade-btn:hover{box-shadow:0 0 20px rgba(251,191,36,.3);transform:translateY(-1px);}
   .mell-upgrade-level{font-family:'Russo One',sans-serif;font-size:11px;color:#fbbf24;text-align:center;letter-spacing:2px;}
 
   /* ARB */
-  .arb-page{padding:16px;max-width:1200px;margin:0 auto;}
-  .arb-title{font-family:'Bebas Neue',cursive;font-size:36px;letter-spacing:6px;background:linear-gradient(90deg,#7c3aed,#a78bfa,#fff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:14px;}
+  .arb-page{padding:24px 16px 32px;max-width:1060px;margin:0 auto;}
+  .arb-title{font-family:'Exo 2',sans-serif;font-weight:900;font-size:clamp(34px,5vw,58px);letter-spacing:2px;text-transform:uppercase;text-align:center;margin-bottom:18px;background:linear-gradient(90deg,#7c3aed,#a78bfa,#fff,#a78bfa,#7c3aed);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-size:400%;animation:logoShift 6s linear infinite;}
   .arb-layout{display:grid;grid-template-columns:1fr;gap:14px;}
-  .arb-top-row{display:grid;grid-template-columns:240px 1fr;gap:14px;align-items:start;}
+  .arb-top-row{display:grid;grid-template-columns:260px minmax(0,1fr);gap:14px;align-items:start;}
   .arb-side{display:flex;flex-direction:column;gap:10px;min-width:0;}
-  .btc-stat-card{background:var(--card-bg);border:1px solid var(--glass-border);border-radius:12px;padding:14px;}
+  .btc-stat-card,.arb-trade-card,.arb-positions,.arb-chart-wrap{background:rgba(12,7,30,.74);border:1px solid rgba(167,139,250,.16);border-radius:14px;backdrop-filter:blur(18px);box-shadow:0 20px 60px rgba(0,0,0,.24);}
+  .btc-stat-card,.arb-trade-card,.arb-positions{padding:14px;}
   .btc-stat-title{font-size:9px;letter-spacing:3px;text-transform:uppercase;color:rgba(167,139,250,.4);margin-bottom:10px;}
   .btc-stat-row{display:flex;justify-content:space-between;align-items:center;padding:5px 0;border-bottom:1px solid rgba(139,92,246,.08);font-size:12px;}
   .btc-stat-row:last-child{border-bottom:none;}
@@ -226,14 +224,11 @@
   .btc-stat-val{font-family:'Russo One',sans-serif;font-size:13px;}
   .btc-stat-val.up{color:#a78bfa;}
   .btc-stat-val.down{color:#7c3aed;}
-  .arb-trade-card{background:var(--card-bg);border:1px solid var(--glass-border);border-radius:12px;padding:14px;}
   .arb-input{width:100%;background:rgba(0,0,0,.4);border:1px solid rgba(139,92,246,.2);border-radius:9px;color:var(--purple-light);font-family:'Russo One',sans-serif;font-size:18px;padding:10px 12px;outline:none;text-align:center;margin-bottom:10px;}
   .arb-buttons{display:grid;grid-template-columns:1fr 1fr;gap:8px;width:100%;}
-  .arb-btn-buy,.arb-btn-sell{padding:12px 6px;border-radius:10px;font-family:'Bebas Neue',cursive;font-size:18px;letter-spacing:2px;cursor:pointer;transition:all .2s;width:100%;display:block;text-align:center;}
+  .arb-btn-buy,.arb-btn-sell{padding:12px 6px;border-radius:10px;font-family:'Russo One',sans-serif;font-size:13px;letter-spacing:1px;cursor:pointer;transition:all .2s;width:100%;display:block;text-align:center;}
   .arb-btn-buy{border:1px solid rgba(34,197,94,.6);background:linear-gradient(135deg,rgba(34,197,94,.25),rgba(22,163,74,.15));color:#4ade80;}
   .arb-btn-sell{border:1px solid rgba(239,68,68,.6);background:linear-gradient(135deg,rgba(239,68,68,.25),rgba(185,28,28,.15));color:#f87171;}
-  .arb-chart-wrap{border-radius:12px;overflow:hidden;border:1px solid rgba(139,92,246,.15);}
-  .arb-positions{background:var(--card-bg);border:1px solid var(--glass-border);border-radius:12px;padding:12px;}
   .arb-pos-header{font-size:9px;letter-spacing:3px;text-transform:uppercase;color:rgba(167,139,250,.4);margin-bottom:8px;}
   .arb-pos-list{display:flex;flex-direction:column;gap:5px;max-height:120px;overflow-y:auto;}
   .arb-pos-item{display:flex;justify-content:space-between;align-items:center;padding:6px 10px;border-radius:7px;font-size:11px;background:rgba(0,0,0,.3);border:1px solid rgba(139,92,246,.1);}
@@ -248,7 +243,7 @@
   /* LEADERBOARD */
   .top-page{padding:24px 20px 40px;max-width:760px;margin:0 auto;position:relative;z-index:10;}
   .lb-title-wrap{text-align:center;margin-bottom:28px;}
-  .lb-title{font-family:'Bebas Neue',cursive;font-size:clamp(42px,7vw,72px);letter-spacing:10px;background:linear-gradient(120deg,#fbbf24,#fff8 40%,#a78bfa 70%,#fbbf24);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-size:300%;animation:lbTitleShift 5s linear infinite;line-height:1;}
+  .lb-title{font-family:'Exo 2',sans-serif;font-weight:900;font-size:clamp(42px,7vw,72px);letter-spacing:2px;text-transform:uppercase;background:linear-gradient(120deg,#fbbf24,#fff8 40%,#a78bfa 70%,#fbbf24);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-size:300%;animation:lbTitleShift 5s linear infinite;line-height:1;}
   @keyframes lbTitleShift{0%{background-position:0%}100%{background-position:300%}}
   .lb-subtitle{font-size:10px;letter-spacing:5px;text-transform:uppercase;color:rgba(167,139,250,.5);margin-top:6px;font-family:'Russo One',sans-serif;}
   .lb-deco{display:flex;align-items:center;justify-content:center;gap:14px;margin-top:10px;}
@@ -298,7 +293,7 @@
 
   /* PROMO */
   .promo-page{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:calc(100vh - 90px);gap:24px;padding:40px 20px;}
-  .promo-title{font-family:'Bebas Neue',cursive;font-size:clamp(36px,7vw,72px);letter-spacing:10px;background:linear-gradient(90deg,#fbbf24,#fff 40%,#a78bfa 70%,#fbbf24);-webkit-background-clip:text;-webkit-text-fill-color:transparent;text-align:center;}
+  .promo-title{font-family:'Exo 2',sans-serif;font-weight:900;font-size:clamp(36px,7vw,72px);letter-spacing:2px;text-transform:uppercase;background:linear-gradient(120deg,#fbbf24,#fff 40%,#a78bfa 70%,#fbbf24);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-size:300%;animation:lbTitleShift 5s linear infinite;text-align:center;}
   .promo-sub{font-size:11px;letter-spacing:4px;text-transform:uppercase;color:rgba(167,139,250,.4);font-family:'Russo One',sans-serif;text-align:center;}
   .promo-card{background:var(--card-bg);border:1px solid rgba(139,92,246,.25);border-radius:20px;padding:30px 28px;width:min(420px,90vw);box-shadow:0 0 40px rgba(139,92,246,.15);position:relative;overflow:hidden;}
   .promo-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,#fbbf24,transparent);}
@@ -310,66 +305,61 @@
   .promo-msg.ok{color:#4ade80;}
   .promo-msg.err{color:#f87171;}
 
- /* SLOTS */
-#page-slots{position:relative;min-height:calc(100vh - 90px);overflow:hidden;}
-.slots-bg{position:absolute;inset:0;background-image:url('72094813-1fa8-415e-bffe-f7c19c0ba7d9.png');background-size:cover;background-position:center top;z-index:0;}
-.slots-bg::after{content:'';position:absolute;inset:0;background:rgba(0,0,0,.62);backdrop-filter:blur(3px);}
-.slots-content{position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;padding:14px 16px 24px;}
-.slots-title{font-family:'Bebas Neue',cursive;font-size:clamp(30px,5vw,60px);letter-spacing:10px;text-align:center;margin-bottom:4px;line-height:1;}
-.slots-title span:nth-child(1){color:#fff;text-shadow:0 0 30px rgba(255,255,255,.9),2px 2px 0 rgba(0,0,0,.8);}
-.slots-title span:nth-child(2){color:#fff;text-shadow:0 0 30px rgba(255,255,255,.9),2px 2px 0 rgba(0,0,0,.8);animation:titleGlow 2s ease-in-out infinite alternate;}
-@keyframes titleGlow{from{text-shadow:0 0 20px rgba(255,255,255,.7),2px 2px 0 rgba(0,0,0,.8)}to{text-shadow:0 0 40px rgba(255,255,255,1),2px 2px 0 rgba(0,0,0,.8)}}
-.slots-title-sub{font-family:'Bebas Neue',cursive;font-size:clamp(11px,1.5vw,14px);letter-spacing:8px;color:rgba(255,255,255,.5);text-align:center;margin-bottom:6px;}
-.slots-title-deco{display:flex;align-items:center;justify-content:center;gap:12px;margin-bottom:6px;}
-.slots-title-line{height:1px;width:80px;background:linear-gradient(90deg,transparent,rgba(255,255,255,.6));}
-.slots-title-line.r{background:linear-gradient(90deg,rgba(255,255,255,.6),transparent);}
-.slots-title-star{color:#fff;font-size:14px;opacity:.7;}
-.slots-balance-bar{display:flex;gap:16px;margin-bottom:6px;align-items:center;}
-.slots-bal-pill{background:rgba(0,0,0,.65);border:2px solid rgba(255,255,255,.5);border-radius:30px;padding:5px 16px;font-family:'Russo One',sans-serif;font-size:14px;color:#fff;}
-.slot-machine{background:rgba(80,20,140,.85);border:3px solid rgba(200,100,255,.7);border-radius:16px;padding:10px;box-shadow:0 0 40px rgba(180,50,255,.4);}
-.slot-grid{display:grid;grid-template-columns:repeat(6,75px);grid-template-rows:repeat(5,60px);gap:2px;}
-.slot-cell{width:75px;height:60px;display:flex;align-items:center;justify-content:center;border-radius:8px;background:rgba(60,10,100,.6);overflow:visible;position:relative;}
-.slot-cell img{object-fit:contain;transition:transform .1s;position:relative;z-index:1;display:block;flex-shrink:0;}
-.slot-cell.winning{animation:winCell .5s ease-in-out infinite alternate;background:rgba(255,255,255,.15);}
-.slot-cell.dimmed{opacity:.2;filter:grayscale(.8);}
-@keyframes winCell{from{transform:scale(1)}to{transform:scale(1.06);box-shadow:inset 0 0 25px rgba(255,255,255,.8)}}
-.slot-cell.bomb-cell{background:rgba(255,100,0,.15);}
-.slot-cell.bomb-reveal{animation:bombReveal 1.4s cubic-bezier(.34,1.56,.64,1) forwards;z-index:10;}
-@keyframes bombReveal{0%{transform:scale(.5);opacity:.3}30%{transform:scale(1.5);opacity:1}100%{transform:scale(1);filter:brightness(1)}}
-.slot-cell.bouncing{animation:slotBounce .38s cubic-bezier(.34,1.7,.64,1) both;}
-@keyframes slotBounce{0%{transform:translateY(-100px) scale(.7);opacity:0}55%{transform:translateY(8px) scale(1.08);opacity:1}100%{transform:translateY(0) scale(1);opacity:1}}
-.slot-cell.exploding{animation:explode .4s ease-out forwards;}
-@keyframes explode{0%{transform:scale(1);opacity:1}100%{transform:scale(0);opacity:0}}
-  /* SLOTS LAYOUT — vertical bonus panel left */
+  /* SLOTS */
+  #page-slots{position:relative;min-height:calc(100vh - 90px);overflow:hidden;}
+  .slots-bg{position:absolute;inset:0;background-size:cover;background-position:center top;z-index:0;}
+  .slots-bg::after{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 25% 20%,rgba(139,92,246,.18),transparent 48%),radial-gradient(ellipse at 78% 70%,rgba(167,139,250,.11),transparent 46%);z-index:1;}
+  .slots-content{position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;padding:24px 16px 32px;max-width:1060px;margin:0 auto;}
+  .slots-title{font-family:'Exo 2',sans-serif;font-weight:900;font-size:clamp(34px,5vw,58px);letter-spacing:2px;text-transform:uppercase;text-align:center;margin-bottom:8px;line-height:1;background:linear-gradient(90deg,#7c3aed,#a78bfa,#fff,#a78bfa,#7c3aed);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-size:400%;animation:logoShift 6s linear infinite;}
+  .slots-title-sub{font-family:'Russo One',sans-serif;font-size:clamp(11px,1.5vw,14px);letter-spacing:4px;color:rgba(167,139,250,.52);text-align:center;margin-bottom:6px;text-transform:uppercase;}
+  .slots-title-deco{display:flex;align-items:center;justify-content:center;gap:12px;margin-bottom:6px;}
+  .slots-title-line{height:1px;width:80px;background:linear-gradient(90deg,transparent,rgba(167,139,250,.6),transparent);}
+  .slots-title-line.r{background:linear-gradient(90deg,transparent,rgba(167,139,250,.6),transparent);}
+  .slots-title-star{color:rgba(167,139,250,.65);font-size:14px;}
+  .slots-balance-bar{display:flex;gap:16px;margin-bottom:6px;align-items:center;}
+  .slots-bal-pill{background:rgba(12,7,30,.78);border:1px solid rgba(167,139,250,.2);border-radius:30px;padding:5px 16px;font-family:'Russo One',sans-serif;font-size:14px;color:#ddd6fe;}
+  .slot-machine{background:rgba(12,7,30,.78);border:1px solid rgba(167,139,250,.2);border-radius:14px;padding:12px;box-shadow:0 20px 60px rgba(0,0,0,.28);}
+  .slot-grid{display:grid;grid-template-columns:repeat(6,75px);grid-template-rows:repeat(5,60px);gap:2px;}
+  .slot-cell{width:75px;height:60px;display:flex;align-items:center;justify-content:center;border-radius:8px;background:rgba(139,92,246,.09);border:1px solid rgba(167,139,250,.09);overflow:visible;position:relative;}
+  .slot-cell img{object-fit:contain;transition:transform .1s;position:relative;z-index:1;display:block;flex-shrink:0;}
+  .slot-cell.winning{animation:winCell .5s ease-in-out infinite alternate;background:rgba(255,255,255,.15);}
+  .slot-cell.dimmed{opacity:.2;filter:grayscale(.8);}
+  @keyframes winCell{from{transform:scale(1)}to{transform:scale(1.06);box-shadow:inset 0 0 25px rgba(255,255,255,.8)}}
+  .slot-cell.bomb-cell{background:rgba(255,100,0,.15);}
+  .slot-cell.bomb-reveal{animation:bombReveal 1.4s cubic-bezier(.34,1.56,.64,1) forwards;z-index:10;}
+  @keyframes bombReveal{0%{transform:scale(.5);opacity:.3}30%{transform:scale(1.5);opacity:1}100%{transform:scale(1);filter:brightness(1)}}
+  .slot-cell.bouncing{animation:slotBounce .38s cubic-bezier(.34,1.7,.64,1) both;}
+  @keyframes slotBounce{0%{transform:translateY(-100px) scale(.7);opacity:0}55%{transform:translateY(8px) scale(1.08);opacity:1}100%{transform:translateY(0) scale(1);opacity:1}}
+  .slot-cell.exploding{animation:explode .4s ease-out forwards;}
+  @keyframes explode{0%{transform:scale(1);opacity:1}100%{transform:scale(0);opacity:0}}
   .slots-main-layout{display:flex;flex-direction:row;align-items:flex-start;gap:16px;width:100%;justify-content:center;flex-wrap:wrap;}
-  .bonus-buy-panel{display:flex;flex-direction:column;gap:8px;padding:12px 14px;background:rgba(0,0,0,.45);border:1px solid rgba(200,100,255,.25);border-radius:14px;min-width:160px;max-width:180px;}
-  .bonus-buy-title{font-family:'Bebas Neue',cursive;font-size:16px;letter-spacing:4px;color:#ffd700;text-align:center;padding-bottom:6px;border-bottom:1px solid rgba(255,200,50,.2);}
-  .bonus-buy-btn{background:linear-gradient(135deg,rgba(120,40,200,.7),rgba(60,10,100,.9));border:2px solid rgba(200,100,255,.5);border-radius:10px;padding:10px 10px;cursor:pointer;transition:all .18s;text-align:center;position:relative;overflow:hidden;width:100%;}
-  .bonus-buy-btn:hover{border-color:rgba(255,200,50,.8);box-shadow:0 0 20px rgba(255,180,0,.4);transform:translateY(-2px);}
+  .bonus-buy-panel{display:flex;flex-direction:column;gap:8px;padding:12px 14px;background:rgba(12,7,30,.78);border:1px solid rgba(167,139,250,.2);border-radius:14px;min-width:160px;max-width:180px;}
+  .bonus-buy-title{font-family:'Russo One',sans-serif;font-size:16px;letter-spacing:2px;color:#ddd6fe;text-align:center;padding-bottom:6px;border-bottom:1px solid rgba(167,139,250,.2);}
+  .bonus-buy-btn{background:linear-gradient(135deg,rgba(236,72,153,.22),rgba(139,92,246,.18));border:1px solid rgba(244,114,182,.42);border-radius:10px;padding:10px;cursor:pointer;transition:all .18s;text-align:center;width:100%;}
+  .bonus-buy-btn:hover{border-color:rgba(244,114,182,.75);box-shadow:0 0 32px rgba(236,72,153,.28);transform:translateY(-2px);}
   .bonus-buy-btn:disabled{opacity:.4;cursor:not-allowed;transform:none;}
-  .bonus-buy-spins{font-family:'Bebas Neue',cursive;font-size:22px;color:#ff6bff;text-shadow:0 0 12px rgba(255,100,255,.7);display:block;line-height:1;}
-  .bonus-buy-label{font-family:'Russo One',sans-serif;font-size:9px;color:rgba(255,200,100,.7);letter-spacing:1px;text-transform:uppercase;display:block;margin-top:1px;}
-  .bonus-buy-cost{font-family:'Russo One',sans-serif;font-size:12px;color:#ffd700;display:block;margin-top:4px;}
+  .bonus-buy-spins{font-family:'Bebas Neue',cursive;font-size:22px;color:#f0abfc;text-shadow:0 0 18px rgba(217,70,239,.6);display:block;line-height:1;}
+  .bonus-buy-label{font-family:'Russo One',sans-serif;font-size:9px;color:rgba(245,208,254,.78);letter-spacing:1px;text-transform:uppercase;display:block;margin-top:1px;}
+  .bonus-buy-cost{font-family:'Russo One',sans-serif;font-size:12px;color:#f5d0fe;display:block;margin-top:4px;text-shadow:0 0 16px rgba(236,72,153,.45);}
+  .slots-center{display:flex;flex-direction:column;align-items:center;gap:10px;}
+  .slots-controls{display:flex;align-items:center;gap:14px;margin-top:4px;flex-wrap:wrap;justify-content:center;}
+  .slots-bet-wrap{display:flex;flex-direction:column;align-items:center;gap:4px;}
+  .slots-bet-label{font-size:9px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.7);font-family:'Russo One',sans-serif;}
+  .slots-bet-row{display:flex;align-items:center;gap:5px;}
+  .slots-bet-btn{background:rgba(139,92,246,.15);border:1px solid rgba(167,139,250,.3);border-radius:8px;color:#fff;font-family:'Russo One',sans-serif;font-size:13px;padding:6px 10px;cursor:pointer;transition:all .15s;}
+  .slots-bet-btn:hover{background:rgba(139,92,246,.3);}
+  .slots-bet-input{background:rgba(0,0,0,.6);border:2px solid rgba(167,139,250,.4);border-radius:10px;color:#fff;font-family:'Russo One',sans-serif;font-size:18px;padding:7px 14px;width:110px;text-align:center;outline:none;}
+  .slots-spin-btn{width:80px;height:80px;border-radius:18px;background:linear-gradient(135deg,rgba(139,92,246,.3),rgba(109,40,217,.16));border:1px solid rgba(167,139,250,.45);color:#fff;font-family:'Russo One',sans-serif;font-size:14px;letter-spacing:1px;cursor:pointer;transition:all .15s;box-shadow:0 0 26px rgba(139,92,246,.2);display:flex;align-items:center;justify-content:center;flex-direction:column;user-select:none;}
+  .slots-spin-btn:hover{transform:scale(1.06);}
+  .slots-spin-btn:active{transform:scale(.94);}
+  .slots-spin-btn:disabled{opacity:.5;cursor:not-allowed;transform:none;}
+  .spin-icon{font-size:28px;display:block;line-height:1;}
+  .slots-win-display{font-family:'Bebas Neue',cursive;font-size:22px;letter-spacing:4px;color:#a78bfa;text-shadow:0 0 16px rgba(139,92,246,.45);min-width:140px;text-align:center;min-height:32px;}
+  .spin-counter-bar{display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:6px;min-height:28px;}
+  .spin-counter-pill{background:rgba(12,7,30,.78);border:2px solid rgba(167,139,250,.4);border-radius:20px;padding:5px 16px;font-family:'Bebas Neue',cursive;font-size:18px;color:#fff;letter-spacing:2px;display:none;animation:pulseGlow 1s ease infinite alternate;}
+  .spin-counter-pill.active{display:block;}
+  @keyframes pulseGlow{from{box-shadow:0 0 8px rgba(255,255,255,.4)}to{box-shadow:0 0 22px rgba(255,255,255,.9)}}
 
- /* SLOTS CENTER — machine + controls below */
-.slots-center{display:flex;flex-direction:column;align-items:center;gap:10px;}
-.slots-controls{display:flex;align-items:center;gap:14px;margin-top:4px;flex-wrap:wrap;justify-content:center;}
-.slots-bet-wrap{display:flex;flex-direction:column;align-items:center;gap:4px;}
-.slots-bet-label{font-size:9px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.7);font-family:'Russo One',sans-serif;}
-.slots-bet-row{display:flex;align-items:center;gap:5px;}
-.slots-bet-btn{background:rgba(180,80,255,.3);border:1px solid rgba(200,100,255,.5);border-radius:8px;color:#fff;font-family:'Russo One',sans-serif;font-size:13px;padding:6px 10px;cursor:pointer;transition:all .15s;}
-.slots-bet-btn:hover{background:rgba(180,80,255,.5);}
-.slots-bet-input{background:rgba(0,0,0,.6);border:2px solid rgba(200,100,255,.6);border-radius:10px;color:#fff;font-family:'Russo One',sans-serif;font-size:18px;padding:7px 14px;width:110px;text-align:center;outline:none;}
-.slots-spin-btn{width:80px;height:80px;border-radius:50%;background:radial-gradient(circle at 35% 30%,rgba(255,255,200,.3),rgba(180,80,0,.8));border:3px solid rgba(255,255,255,.8);color:#fff;font-family:'Bebas Neue',cursive;font-size:14px;letter-spacing:1px;cursor:pointer;transition:all .15s;box-shadow:0 4px 20px rgba(255,150,0,.4);display:flex;align-items:center;justify-content:center;flex-direction:column;user-select:none;}
-.slots-spin-btn:hover{transform:scale(1.06);}
-.slots-spin-btn:active{transform:scale(.94);}
-.slots-spin-btn:disabled{opacity:.5;cursor:not-allowed;transform:none;}
-.spin-icon{font-size:28px;display:block;line-height:1;}
-.slots-win-display{font-family:'Bebas Neue',cursive;font-size:22px;letter-spacing:4px;color:#fff;text-shadow:0 0 20px rgba(255,255,255,.8);min-width:140px;text-align:center;min-height:32px;}
-.spin-counter-bar{display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:6px;min-height:28px;}
-.spin-counter-pill{background:rgba(0,0,0,.7);border:2px solid rgba(255,100,255,.6);border-radius:20px;padding:5px 16px;font-family:'Bebas Neue',cursive;font-size:18px;color:#fff;letter-spacing:2px;display:none;animation:pulseGlow 1s ease infinite alternate;}
-.spin-counter-pill.active{display:block;}
-@keyframes pulseGlow{from{box-shadow:0 0 8px rgba(255,255,255,.4)}to{box-shadow:0 0 22px rgba(255,255,255,.9)}}
   /* SLOTS BIG WIN */
   #slotsBigWin{position:fixed;inset:0;z-index:50000;display:none;align-items:center;justify-content:center;flex-direction:column;backdrop-filter:blur(6px);background:rgba(0,0,0,.7);}
   #slotsBigWin.active{display:flex;}
@@ -378,7 +368,6 @@
   .sbw-sub{font-family:'Bebas Neue',cursive;font-size:clamp(28px,6vw,55px);letter-spacing:6px;color:#ff6b9d;margin-top:8px;text-align:center;}
   .sbw-amount{font-family:'Russo One',sans-serif;font-size:clamp(36px,8vw,70px);color:#ffd700;margin-top:12px;animation:sbwScale .5s ease infinite alternate;}
   @keyframes sbwScale{from{transform:scale(.95)}to{transform:scale(1.05)}}
-
   .candy-piece{position:fixed;top:-60px;z-index:50001;pointer-events:none;animation:candyFall linear forwards;font-size:30px;}
   @keyframes candyFall{0%{transform:translateY(0) rotate(0) scale(1);opacity:1}100%{transform:translateY(110vh) rotate(540deg) scale(.5);opacity:0}}
 
@@ -396,19 +385,6 @@
   @keyframes bombPop{0%{transform:translate(-50%,-50%) scale(0);opacity:0}20%{transform:translate(-50%,-50%) scale(1.5);opacity:1}40%{transform:translate(-50%,-50%) scale(.9);opacity:1}100%{transform:translate(-50%,-50%) scale(1.1);opacity:0}}
   @keyframes flashFade{0%{opacity:1}100%{opacity:0}}
 
-  @media(max-width:700px){
-    .main{flex-direction:column;padding:8px;}
-    .controls,.history-panel{width:100%;}
-    .history-list{flex-direction:row;overflow-x:auto;max-height:none;flex-wrap:nowrap;}
-    .arb-top-row{grid-template-columns:1fr;}
-    .slot-grid{grid-template-columns:repeat(6,55px);grid-template-rows:repeat(5,50px);}
-    .slot-cell{width:55px;height:50px;}
-    .slot-cell img{width:38px;height:38px;}
-    .floating-ad{width:260px;}
-    .slots-main-layout{flex-direction:column;align-items:center;}
-    .bonus-buy-panel{flex-direction:row;flex-wrap:wrap;max-width:100%;}
-  }
-
   /* PROFILE */
   .profile-page{max-width:1060px;margin:0 auto;padding:18px 16px 28px;display:flex;flex-direction:column;gap:14px;}
   .profile-hero{position:relative;min-height:220px;border:1px solid rgba(167,139,250,.22);border-radius:14px;overflow:hidden;background:linear-gradient(135deg,rgba(28,16,64,.96),rgba(9,5,24,.96));box-shadow:0 20px 60px rgba(0,0,0,.35);}
@@ -422,7 +398,7 @@
   .profile-status-dot{position:absolute;right:-4px;bottom:-4px;width:18px;height:18px;border-radius:50%;background:#4ade80;border:3px solid #0a0514;box-shadow:0 0 16px rgba(74,222,128,.7);}
   .profile-main-info{min-width:0;flex:1;}
   .profile-kicker{font-family:'Russo One',sans-serif;font-size:10px;letter-spacing:3px;text-transform:uppercase;color:rgba(196,181,253,.62);margin-bottom:5px;}
-  .profile-name{font-family:'Bebas Neue',cursive;font-size:clamp(38px,7vw,74px);line-height:.95;letter-spacing:5px;background:linear-gradient(90deg,#fff,#c4b5fd,#a78bfa);-webkit-background-clip:text;-webkit-text-fill-color:transparent;text-shadow:0 0 34px rgba(139,92,246,.35);overflow-wrap:anywhere;}
+  .profile-name{font-family:'Bebas Neue',cursive;font-size:clamp(38px,7vw,74px);line-height:.95;letter-spacing:5px;background:linear-gradient(90deg,#fff,#c4b5fd,#a78bfa);-webkit-background-clip:text;-webkit-text-fill-color:transparent;overflow-wrap:anywhere;}
   .profile-level-row{display:flex;align-items:center;gap:10px;margin-top:10px;flex-wrap:wrap;}
   .profile-level-badge{font-family:'Russo One',sans-serif;font-size:11px;letter-spacing:1px;color:#ddd6fe;border:1px solid rgba(167,139,250,.3);border-radius:999px;padding:7px 11px;background:rgba(139,92,246,.12);}
   .profile-balance{font-family:'Russo One',sans-serif;font-size:13px;color:#4ade80;border:1px solid rgba(74,222,128,.22);border-radius:999px;padding:7px 11px;background:rgba(74,222,128,.07);}
@@ -438,81 +414,40 @@
   .achievements-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;}
   .achievement-item{background:rgba(0,0,0,.25);border:1px solid rgba(167,139,250,.15);border-radius:10px;padding:12px;min-height:104px;transition:all .18s;position:relative;overflow:hidden;}
   .achievement-item::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:#8b5cf6;opacity:.75;}
-  .achievement-item:hover{border-color:rgba(167,139,250,.36);transform:translateY(-1px);}
+  .achievement-item.achievement-locked{opacity:.46;}
   .achievement-code{font-family:'Russo One',sans-serif;font-size:10px;letter-spacing:2px;color:rgba(196,181,253,.5);margin-bottom:12px;text-transform:uppercase;}
   .achievement-name{font-size:13px;color:#f5f3ff;font-weight:700;line-height:1.25;}
   .achievement-desc{font-size:11px;color:rgba(221,214,254,.48);line-height:1.35;margin-top:6px;}
-  .achievement-locked{opacity:.46;}
   .daily-card{min-height:210px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:12px;background:linear-gradient(135deg,rgba(139,92,246,.16),rgba(0,0,0,.18));border:1px solid rgba(167,139,250,.16);border-radius:12px;}
   .daily-mark{width:54px;height:54px;border-radius:16px;border:1px solid rgba(167,139,250,.35);background:rgba(139,92,246,.14);display:flex;align-items:center;justify-content:center;font-family:'Russo One',sans-serif;color:#ddd6fe;letter-spacing:1px;}
   .daily-title{color:#ddd6fe;font-size:18px;font-weight:800;font-family:'Russo One',sans-serif;}
   .daily-btn{padding:12px 30px;background:linear-gradient(135deg,rgba(139,92,246,.45),rgba(109,40,217,.28));border:1px solid rgba(167,139,250,.45);border-radius:10px;color:#fff;font-family:'Russo One',sans-serif;font-size:12px;letter-spacing:1px;cursor:pointer;}
   .daily-time{font-size:12px;color:rgba(221,214,254,.52);}
-  @media(max-width:850px){.profile-hero-content{align-items:flex-start;flex-direction:column;justify-content:flex-end}.profile-stats-grid,.achievements-grid{grid-template-columns:repeat(2,minmax(0,1fr));}}
-  @media(max-width:520px){.profile-tabs{grid-template-columns:1fr}.profile-stats-grid,.achievements-grid{grid-template-columns:1fr}.profile-avatar{width:92px;height:92px}.profile-hero-content{padding:18px}.profile-banner-placeholder{left:18px;right:auto;}}
 
-  /* UNIFIED PAGE POLISH */
-  .page-title-unified,.dodep-title,.arb-title,.slots-title{
-    font-family:'Bebas Neue',cursive;
-    letter-spacing:8px;
-    line-height:1;
-    background:linear-gradient(90deg,#7c3aed,#a78bfa,#fff,#a78bfa,#7c3aed);
-    -webkit-background-clip:text;
-    -webkit-text-fill-color:transparent;
-    background-size:400%;
-    animation:logoShift 6s linear infinite;
-    filter:drop-shadow(0 0 20px rgba(139,92,246,.45));
-    text-shadow:none;
+  @media(max-width:700px){
+    .main{flex-direction:column;padding:8px;}
+    .controls,.history-panel{width:100%;}
+    .history-list{flex-direction:row;overflow-x:auto;max-height:none;flex-wrap:nowrap;}
+    .arb-top-row{grid-template-columns:1fr;}
+    .slot-grid{grid-template-columns:repeat(6,55px);grid-template-rows:repeat(5,50px);}
+    .slot-cell{width:55px;height:50px;}
+    .slot-cell img{width:38px;height:38px;}
+    .floating-ad{width:260px;}
+    .slots-main-layout{flex-direction:column;align-items:center;}
+    .bonus-buy-panel{flex-direction:row;flex-wrap:wrap;max-width:100%;}
   }
-  .dodep-page,.arb-page,.slots-content{max-width:1060px;margin:0 auto;}
-  .dodep-page{min-height:calc(100vh - 90px);display:grid;grid-template-columns:minmax(280px,1fr) minmax(260px,340px);gap:18px;align-items:start;padding:24px 16px 32px;}
-  .dodep-left,.dodep-right{background:rgba(12,7,30,.74);border:1px solid rgba(167,139,250,.16);border-radius:14px;padding:20px;backdrop-filter:blur(18px);box-shadow:0 20px 60px rgba(0,0,0,.28);}
-  .dodep-title{font-size:clamp(38px,6vw,62px);text-align:center;}
-  .dodep-balance{font-family:'Russo One',sans-serif;font-size:16px;letter-spacing:1px;color:rgba(221,214,254,.78);}
-  .dodep-btn{width:min(250px,74vw);height:min(250px,74vw);border-radius:22px;font-family:'Russo One',sans-serif;font-size:clamp(22px,4vw,34px);letter-spacing:1px;background:linear-gradient(135deg,rgba(139,92,246,.28),rgba(109,40,217,.12));}
-  .dodep-btn .btn-icon{font-size:34px;}
-  .dodep-shop-title,.mell-card-name{font-family:'Russo One',sans-serif;letter-spacing:2px;}
-  .mell-buy-btn,.mell-upgrade-btn{font-family:'Russo One',sans-serif;font-size:13px;letter-spacing:1px;}
-  .mell-video,.mell-video-wrap{object-fit:contain;background:#05020d;}
-  .arb-page{padding:24px 16px 32px;}
-  .arb-title{font-size:clamp(34px,5vw,58px);text-align:center;margin-bottom:18px;}
-  .arb-top-row{grid-template-columns:260px minmax(0,1fr);}
-  .btc-stat-card,.arb-trade-card,.arb-positions,.arb-chart-wrap{background:rgba(12,7,30,.74);border:1px solid rgba(167,139,250,.16);border-radius:14px;backdrop-filter:blur(18px);box-shadow:0 20px 60px rgba(0,0,0,.24);}
-  .arb-btn-buy,.arb-btn-sell{font-family:'Russo One',sans-serif;font-size:13px;letter-spacing:1px;}
-  #page-slots{background:transparent;}
-  .slots-bg{background-image:none;}
-  .slots-bg::after{background:radial-gradient(ellipse at 25% 20%,rgba(139,92,246,.18),transparent 48%),radial-gradient(ellipse at 78% 70%,rgba(167,139,250,.11),transparent 46%);}
-  .slots-content{padding:24px 16px 32px;}
-  .slots-title{font-size:clamp(34px,5vw,58px);margin-bottom:8px;}
-  .slots-title span{color:inherit!important;text-shadow:none!important;}
-  .slots-title-sub{font-family:'Russo One',sans-serif;color:rgba(167,139,250,.52);letter-spacing:4px;}
-  .slots-title-star{color:rgba(167,139,250,.65);}
-  .slots-title-line,.slots-title-line.r{background:linear-gradient(90deg,transparent,rgba(167,139,250,.6),transparent);}
-  .slots-bal-pill,.spin-counter-pill,.bonus-buy-panel,.slot-machine{background:rgba(12,7,30,.78);border:1px solid rgba(167,139,250,.2);box-shadow:0 20px 60px rgba(0,0,0,.28);color:#ddd6fe;}
-  .slot-machine{border-radius:14px;padding:12px;}
-  .slot-cell{background:rgba(139,92,246,.09);border:1px solid rgba(167,139,250,.09);}
-  .bonus-buy-title{font-family:'Russo One',sans-serif;color:#ddd6fe;letter-spacing:2px;}
-  .bonus-buy-btn{background:rgba(139,92,246,.08);border:1px solid rgba(167,139,250,.18);box-shadow:none;}
-  .bonus-buy-btn:hover{border-color:rgba(167,139,250,.45);box-shadow:0 0 24px rgba(139,92,246,.18);}
-  .bonus-buy-spins,.bonus-buy-cost,.slots-win-display{color:#a78bfa;text-shadow:0 0 16px rgba(139,92,246,.45);}
-  .slots-spin-btn{border-radius:18px;background:linear-gradient(135deg,rgba(139,92,246,.3),rgba(109,40,217,.16));border:1px solid rgba(167,139,250,.45);box-shadow:0 0 26px rgba(139,92,246,.2);font-family:'Russo One',sans-serif;}
-  .floating-ad-media{height:190px;object-fit:contain;background:rgba(0,0,0,.42);}
-  @media(max-width:850px){.dodep-page,.arb-top-row{grid-template-columns:1fr}.dodep-page{padding:16px 12px 24px}}
-
-  .dodep-title,.arb-title,.slots-title{
-    font-family:'Bebas Neue',cursive!important;
-    letter-spacing:8px!important;
-    font-weight:400!important;
+  @media(max-width:850px){
+    .dodep-page,.arb-top-row{grid-template-columns:1fr;}
+    .dodep-page{padding:16px 12px 24px;}
+    .profile-hero-content{align-items:flex-start;flex-direction:column;justify-content:flex-end;}
+    .profile-stats-grid,.achievements-grid{grid-template-columns:repeat(2,minmax(0,1fr));}
   }
-  .slots-bg{background-image:url('72094813-1fa8-415e-bffe-f7c19c0ba7d9.png');background-size:cover;background-position:center;}
-  .slots-bg-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.34;filter:saturate(1.15) contrast(1.05);z-index:0;}
-  .slots-bg::after{z-index:1;background:linear-gradient(180deg,rgba(10,5,20,.50),rgba(10,5,20,.78)),radial-gradient(ellipse at 50% 20%,rgba(139,92,246,.20),transparent 55%);}
-  .bonus-buy-btn,.bonus-buy-btn[style]{background:linear-gradient(135deg,rgba(236,72,153,.22),rgba(139,92,246,.18))!important;border:1px solid rgba(244,114,182,.42)!important;box-shadow:0 0 22px rgba(236,72,153,.12)!important;}
-  .bonus-buy-btn:hover,.bonus-buy-btn[style]:hover{border-color:rgba(244,114,182,.75)!important;box-shadow:0 0 32px rgba(236,72,153,.28)!important;}
-  .bonus-buy-spins,.bonus-buy-spins[style]{color:#f0abfc!important;text-shadow:0 0 18px rgba(217,70,239,.6)!important;}
-  .bonus-buy-label,.bonus-buy-label[style]{color:rgba(245,208,254,.78)!important;}
-  .bonus-buy-cost,.bonus-buy-cost[style]{color:#f5d0fe!important;text-shadow:0 0 16px rgba(236,72,153,.45)!important;}
-  .achievement-item:hover{transform:none!important;}
+  @media(max-width:520px){
+    .profile-tabs{grid-template-columns:1fr;}
+    .profile-stats-grid,.achievements-grid{grid-template-columns:1fr;}
+    .profile-avatar{width:92px;height:92px;}
+    .profile-hero-content{padding:18px;}
+  }
 </style>
 </head>
 <body>
@@ -544,13 +479,13 @@
 <div id="introAdOverlay">
   <button class="intro-ad-close" onclick="closeIntroAd()">X</button>
   <div class="intro-ad-label">ВЫШЛО НОВОЕ ИНТЕРВЬЮ</div>
-  <img src="maxresdefault (2).jpg" class="intro-ad-img" alt="Mellstroy" onerror="this.style.background='#1a0a2e';this.style.minHeight='300px'">
+  <img src="maxresdefault%20(2).jpg" class="intro-ad-img" alt="Mellstroy" onerror="this.style.background='#1a0a2e';this.style.minHeight='300px'">
   <button class="intro-ad-btn" onclick="window.open('https://youtu.be/R6rhxJjVNCU?si=2qdy8zBdG90BJ5MU','_blank')">СМОТРЕТЬ</button>
 </div>
 
 <!-- FULLSCREEN AD -->
 <div id="fullscreenAdOverlay">
-  <video id="fullscreenAdVideo" playsinline loop></video>
+  <video id="fullscreenAdVideo" playsinline loop preload="auto"></video>
   <button id="skipAdBtn" onclick="closeFullscreenAd()">
     <span style="width:20px;height:20px;border-radius:50%;border:1.5px solid rgba(255,255,255,.5);display:flex;align-items:center;justify-content:center;font-size:10px">▶</span>
     Пропустить рекламу
@@ -572,7 +507,7 @@
   <div class="nav-right">
     <button class="nav-promo-btn" onclick="showPage('promo',this)">Промокод</button>
     <div class="nav-user" id="navUser" onclick="showPage('profile',null)" style="display:flex;align-items:center;gap:8px;cursor:pointer;padding:6px 12px;background:rgba(200,100,255,.1);border-radius:8px;border:1px solid rgba(200,100,255,.2);">
-      <img id="navAvatar" src="845b0454aba743dc34edc78901876f1b.png" style="width:28px;height:28px;border-radius:50%;object-fit:cover;border:2px solid #ffd700">
+      <img id="navAvatar" src="845b0454aba743dc34edc78901876f1b.png" style="width:28px;height:28px;border-radius:50%;object-fit:cover;border:2px solid #ffd700" onerror="this.style.display='none'">
       <span id="navUsername" style="color:#ffd700;font-weight:bold;font-size:12px">PLAYER</span>
     </div>
     <button class="nav-logout" onclick="doLogout()">Выйти</button>
@@ -667,10 +602,9 @@
 
 <!-- PAGE: SLOTS -->
 <div class="page" id="page-slots">
-  <div class="slots-bg">
-  </div>
+  <div class="slots-bg"></div>
   <div class="slots-content">
-    <div class="slots-title"><span>SWEET</span> <span>BURMALDANZA</span> <span>1000</span></div>
+    <div class="slots-title">SWEET BURMALDANZA 1000</div>
     <div class="slots-title-sub">ОФИЦИАЛЬНОЕ КАЗИНО МЕЛЛСТРОЯ</div>
     <div class="slots-title-deco">
       <div class="slots-title-line"></div>
@@ -685,7 +619,6 @@
       <div class="spin-counter-pill" id="spinCounterPill">БОНУС: <span id="spinCounterNum">0</span> прокрутов</div>
     </div>
     <div class="slots-main-layout">
-      <!-- BONUS PANEL LEFT -->
       <div class="bonus-buy-panel">
         <div class="bonus-buy-title">БОНУСКА</div>
         <button class="bonus-buy-btn" onclick="buyBonus(50000,6000)">
@@ -698,18 +631,17 @@
           <span class="bonus-buy-label">ГОРЯЧАЯ бонуска</span>
           <span class="bonus-buy-cost" style="color:#ff9d00">250 000 ₽</span>
         </button>
-        <button class="bonus-buy-btn" onclick="buyBonus(1000000,160000)" style="border-color:rgba(255,50,50,.6)">
+        <button class="bonus-buy-btn" onclick="buyBonus(1000000,160000)">
           <span class="bonus-buy-spins" style="color:#ff6b6b">5–7</span>
           <span class="bonus-buy-label">МЕГА бонуска</span>
           <span class="bonus-buy-cost" style="color:#ff4444">1 000 000 ₽</span>
         </button>
-        <button class="bonus-buy-btn" onclick="buyBonus(10000000,1060000)" style="border-color:rgba(255,215,0,.8);background:linear-gradient(135deg,rgba(180,120,0,.7),rgba(60,20,0,.9))">
+        <button class="bonus-buy-btn" onclick="buyBonus(10000000,1060000)">
           <span class="bonus-buy-spins" style="color:#ffd700;font-size:28px">5–7</span>
           <span class="bonus-buy-label" style="color:#ffd700">ЛЕГЕНДАРНАЯ</span>
           <span class="bonus-buy-cost" style="color:#ffd700;font-size:12px">10 000 000 ₽</span>
         </button>
       </div>
-      <!-- MACHINE + CONTROLS -->
       <div class="slots-center">
         <div class="slot-machine">
           <div class="slot-grid" id="slotGrid"></div>
@@ -752,29 +684,35 @@
   <div class="dodep-page">
     <div class="dodep-left">
       <div class="dodep-title">ДОДЕП</div>
-      <div class="dodep-balance">Баланс: <span id="dodepBalDisplay" style="color:#a78bfa">1 000 ₽</span></div>
-      <button class="dodep-btn" id="dodepBtn" onclick="dodepClick()">
-        <span class="btn-icon">+</span>
-        <span>+1 ₽</span>
-      </button>
-      <div class="dodep-info">Нажимай и пополняй баланс!</div>
+      <div style="background:rgba(139,92,246,.1);border:1px solid rgba(139,92,246,.3);border-radius:12px;padding:10px 20px;margin-bottom:20px;">
+        <span style="font-size:12px;color:rgba(255,255,255,.5);text-transform:uppercase;letter-spacing:2px;">Баланс</span><br>
+        <span id="dodepBalDisplay" style="font-family:'Russo One',sans-serif;font-size:24px;color:#a78bfa;text-shadow:0 0 15px rgba(167,139,250,.5);">1 000 ₽</span>
+      </div>
+      <div style="position:relative;padding:20px;">
+        <div style="position:absolute;inset:0;background:radial-gradient(circle,rgba(167,139,250,.4) 0%,transparent 70%);filter:blur(20px);pointer-events:none;animation:pulseGlow 2s infinite alternate;"></div>
+        <button class="dodep-btn" id="dodepBtn" onclick="dodepClick()" style="position:relative;z-index:2;">
+          <span class="btn-icon">💎</span>
+          <span style="font-size:0.6em;margin-top:-10px;">+1 ₽</span>
+        </button>
+      </div>
+      <div class="dodep-info" style="margin-top:15px;background:rgba(0,0,0,.3);padding:8px 16px;border-radius:20px;border:1px solid rgba(167,139,250,.1);">Нажимай и пополняй баланс!</div>
     </div>
     <div class="dodep-right">
       <div class="dodep-shop-title">МАГАЗИН</div>
-      <div class="mell-card" id="mellCard">
+      <div class="mell-card" id="mellCard" style="background:linear-gradient(180deg,rgba(20,10,40,.9) 0%,rgba(10,5,20,.95) 100%);">
         <div class="mell-video-wrap" id="mellVideoWrap">
-          <video class="mell-video" id="mellVideo" src="6e920b01230d4572b8b3d97cbf41e3db.mp4" loop muted playsinline></video>
+          <video class="mell-video" id="mellVideo" src="6e920b01230d4572b8b3d97cbf41e3db.mp4" loop muted playsinline preload="none"></video>
           <div class="mell-grey-overlay" id="mellGreyOverlay">👤</div>
           <div class="mell-income-badge" id="mellIncomeBadge">5₽/сек</div>
         </div>
-        <div class="mell-card-name">МЕЛЛСТРОЙ</div>
-        <div style="font-size:11px;color:rgba(167,139,250,.4);letter-spacing:1px;text-align:center" id="mellIncomeDesc">+5 ₽ каждую секунду</div>
-        <button class="mell-buy-btn" id="mellBuyBtn" onclick="buyMellstroy()">КУПИТЬ — 5 000 ₽</button>
-        <div class="mell-owned-label">✓ КУПЛЕНО</div>
-        <div class="mell-upgrade-section" id="mellUpgradeSection">
-          <div class="mell-upgrade-level" id="mellUpgradeLevel">Уровень улучшения: 0</div>
-          <div class="mell-upgrade-info" id="mellUpgradeInfo">+5 ₽/сек → +7 ₽/сек</div>
-          <button class="mell-upgrade-btn" id="mellUpgradeBtn" onclick="upgradeMellstroy()">УЛУЧШИТЬ — <span id="mellUpgradeCost">7 000 ₽</span></button>
+        <div class="mell-card-name" style="margin-top:5px;">МЕЛЛСТРОЙ</div>
+        <div style="font-family:'Russo One',sans-serif;font-size:11px;color:rgba(167,139,250,.6);letter-spacing:1px;text-align:center;background:rgba(139,92,246,.1);padding:5px 10px;border-radius:6px;width:100%;" id="mellIncomeDesc">+5 ₽ каждую секунду</div>
+        <button class="mell-buy-btn" id="mellBuyBtn" onclick="buyMellstroy()" style="margin-top:10px;">КУПИТЬ — 5 000 ₽</button>
+        <div class="mell-owned-label" style="color:#4ade80;text-shadow:0 0 10px rgba(74,222,128,.4);margin-top:10px;">✓ КУПЛЕНО</div>
+        <div class="mell-upgrade-section" id="mellUpgradeSection" style="background:rgba(0,0,0,.4);border:1px solid rgba(251,191,36,.2);border-radius:12px;padding:12px;margin-top:15px;">
+          <div class="mell-upgrade-level" id="mellUpgradeLevel" style="margin-bottom:5px;">Уровень: 0</div>
+          <div class="mell-upgrade-info" id="mellUpgradeInfo" style="margin-bottom:10px;">+5 ₽/сек → +7 ₽/сек</div>
+          <button class="mell-upgrade-btn" id="mellUpgradeBtn" onclick="upgradeMellstroy()">АПГРЕЙД — <span id="mellUpgradeCost">7 000 ₽</span></button>
         </div>
       </div>
     </div>
@@ -784,16 +722,7 @@
 <!-- PAGE: ARB -->
 <div class="page" id="page-arb">
   <div class="arb-page">
-
-    <div class="arb-title"
-      style="
-        font-family:'Bebas Neue',cursive;
-        letter-spacing:10px;
-        text-transform:uppercase;
-      ">
-      АРБИТРАЖ БИТКОИНА
-    </div>
-
+    <div class="arb-title">АРБИТРАЖ БИТКОИНА</div>
     <div class="arb-layout">
       <div class="arb-top-row">
         <div class="arb-side">
@@ -805,45 +734,36 @@
             <div class="btc-stat-row"><span class="btc-stat-lbl">24 часа</span><span class="btc-stat-val" id="btcChange24h">-</span></div>
             <div class="btc-stat-row"><span class="btc-stat-lbl">Объём 24ч</span><span class="btc-stat-val" id="btcVol" style="color:#c4b5fd">-</span></div>
           </div>
-
           <div class="arb-trade-card">
             <div class="arb-balance-row">
               <span class="arb-bal-label">Баланс</span>
               <span class="arb-bal-val" id="arbBalDisplay">1 000 ₽</span>
             </div>
-
-            <div class="control-label">Сумма сделки (R)</div>
-
+            <div class="control-label">Сумма сделки (₽)</div>
             <input class="arb-input" id="arbAmount" type="number" value="100" min="10" placeholder="Сумма...">
-
             <div class="arb-buttons">
               <button class="arb-btn-buy" onclick="openPosition('buy')">BUY</button>
               <button class="arb-btn-sell" onclick="openPosition('sell')">SELL</button>
             </div>
           </div>
-
           <div class="arb-positions">
             <div class="arb-pos-header">Открытые позиции</div>
-
             <div class="arb-pos-list" id="arbPositions">
-              <div style="font-size:11px;color:rgba(167,139,250,.3);text-align:center;padding:10px">
-                Нет открытых позиций
-              </div>
+              <div style="font-size:11px;color:rgba(167,139,250,.3);text-align:center;padding:10px">Нет открытых позиций</div>
             </div>
           </div>
         </div>
-
         <div>
           <div class="arb-chart-wrap">
             <iframe src="https://ru.tradingview.com/widgetembed/?frameElementId=tradingview&symbol=BTCUSD&interval=5&theme=dark&style=1&locale=ru&hide_top_toolbar=0&save_image=0&enable_publishing=0&withdateranges=1"
               width="100%" height="460" frameborder="0" allowtransparency="true" scrolling="no" style="display:block;background:#0a0514"></iframe>
           </div>
         </div>
-
       </div>
     </div>
   </div>
 </div>
+
 <!-- PAGE: TOP -->
 <div class="page" id="page-top">
   <div class="top-page">
@@ -884,61 +804,57 @@
   </div>
 </div>
 
-<!-- PROFILE PAGE -->
+<!-- PAGE: PROFILE -->
 <div class="page" id="page-profile">
   <div class="profile-page">
     <section class="profile-hero">
-      <div class="profile-banner" onclick="document.getElementById('bannerUpload').click()" title="&#1053;&#1072;&#1078;&#1084;&#1080; &#1095;&#1090;&#1086;&#1073;&#1099; &#1091;&#1089;&#1090;&#1072;&#1085;&#1086;&#1074;&#1080;&#1090;&#1100; &#1073;&#1072;&#1085;&#1085;&#1077;&#1088;">
-        <img id="profileBanner" src="" alt="">
-        <span id="bannerPlaceholder" class="profile-banner-placeholder">&#1059;&#1089;&#1090;&#1072;&#1085;&#1086;&#1074;&#1080;&#1090;&#1100; &#1073;&#1072;&#1085;&#1085;&#1077;&#1088;</span>
+      <div class="profile-banner" onclick="document.getElementById('bannerUpload').click()" style="position:absolute;inset:0;z-index:1;cursor:pointer;display:flex;align-items:center;justify-content:center;">
+        <img id="profileBanner" src="" style="width:100%;height:100%;object-fit:cover;display:none;">
+        <span id="bannerPlaceholder" class="profile-banner-placeholder" style="position:relative;z-index:2;background:rgba(0,0,0,.4);padding:8px 15px;border-radius:8px;border:1px dashed rgba(255,255,255,.3);">Нажми, чтобы установить баннер</span>
         <input type="file" id="bannerUpload" accept="image/*" style="display:none" onchange="changeBanner(event)">
       </div>
-      <div class="profile-hero-content">
-        <div class="profile-avatar-wrap">
-          <img id="profileAvatar" class="profile-avatar" src="845b0454aba743dc34edc78901876f1b.png" onclick="document.getElementById('avatarUpload').click()" title="&#1053;&#1072;&#1078;&#1084;&#1080; &#1095;&#1090;&#1086;&#1073;&#1099; &#1080;&#1079;&#1084;&#1077;&#1085;&#1080;&#1090;&#1100; &#1072;&#1074;&#1072;&#1090;&#1072;&#1088;" alt="avatar">
+      <div class="profile-hero-content" style="position:relative;z-index:3;pointer-events:none;display:flex;align-items:flex-end;gap:20px;padding:25px;min-height:220px;">
+        <div class="profile-avatar-wrap" style="pointer-events:auto;position:relative;">
+          <img id="profileAvatar" class="profile-avatar" src="845b0454aba743dc34edc78901876f1b.png" onclick="document.getElementById('avatarUpload').click()" style="cursor:pointer;" onerror="this.style.background='#2a1a4e'">
           <input type="file" id="avatarUpload" accept="image/*" style="display:none" onchange="changeAvatar(event)">
           <div class="profile-status-dot"></div>
         </div>
-        <div class="profile-main-info">
-          <div class="profile-kicker">&#1055;&#1088;&#1086;&#1092;&#1080;&#1083;&#1100; &#1080;&#1075;&#1088;&#1086;&#1082;&#1072;</div>
+        <div class="profile-main-info" style="flex:1;">
+          <div class="profile-kicker">Профиль игрока</div>
           <div class="profile-name" id="profileUsername">PLAYER</div>
           <div class="profile-level-row">
-            <div class="profile-level-badge" id="profileLevel">&#1059;&#1088;&#1086;&#1074;&#1077;&#1085;&#1100; 1</div>
-            <div class="profile-balance" id="profileBalance">0 &#8381;</div>
+            <div class="profile-level-badge" id="profileLevel">Уровень 1</div>
+            <div class="profile-balance" id="profileBalance">0 ₽</div>
           </div>
         </div>
       </div>
     </section>
-
     <div class="profile-tabs">
-      <button onclick="showProfileTab('stats')" class="profile-tab active">&#1057;&#1058;&#1040;&#1058;&#1048;&#1057;&#1058;&#1048;&#1050;&#1040;</button>
-      <button onclick="showProfileTab('achievements')" class="profile-tab">&#1044;&#1054;&#1057;&#1058;&#1048;&#1046;&#1045;&#1053;&#1048;&#1071;</button>
-      <button onclick="showProfileTab('daily')" class="profile-tab">&#1055;&#1054;&#1044;&#1040;&#1056;&#1054;&#1050;</button>
+      <button onclick="showProfileTab('stats')" class="profile-tab active">СТАТИСТИКА</button>
+      <button onclick="showProfileTab('achievements')" class="profile-tab">ДОСТИЖЕНИЯ</button>
+      <button onclick="showProfileTab('daily')" class="profile-tab">ПОДАРОК</button>
     </div>
-
     <section class="profile-panel">
       <div id="profile-tab-stats" class="profile-tab-content" style="display:block">
         <div class="profile-stats-grid">
-          <div class="stat-card"><div class="stat-label">&#1051;&#1102;&#1073;&#1080;&#1084;&#1072;&#1103; &#1080;&#1075;&#1088;&#1072;</div><div class="stat-value" id="statFavGame">Slots</div></div>
-          <div class="stat-card"><div class="stat-label">&#1042;&#1089;&#1077;&#1075;&#1086; &#1089;&#1099;&#1075;&#1088;&#1072;&#1085;&#1086;</div><div class="stat-value" id="statGamesPlayed">0</div></div>
-          <div class="stat-card"><div class="stat-label">&#1055;&#1086;&#1073;&#1077;&#1076;</div><div class="stat-value" style="color:#4ade80" id="statWins">0</div></div>
-          <div class="stat-card"><div class="stat-label">&#1055;&#1088;&#1086;&#1080;&#1075;&#1088;&#1099;&#1096;&#1077;&#1081;</div><div class="stat-value" style="color:#f87171" id="statLosses">0</div></div>
-          <div class="stat-card"><div class="stat-label">&#1055;&#1086;&#1073;&#1077;&#1076; &#1087;&#1086;&#1076;&#1088;&#1103;&#1076;</div><div class="stat-value" style="color:#fbbf24" id="statWinStreak">0</div></div>
-          <div class="stat-card"><div class="stat-label">&#1042;&#1088;&#1077;&#1084;&#1103; &#1074; &#1080;&#1075;&#1088;&#1077;</div><div class="stat-value" id="statPlayTime">0&#1095; 0&#1084;</div></div>
-          <div class="stat-card"><div class="stat-label">&#1056;&#1091;&#1073;&#1083;&#1077;&#1081; &#1074; &#1089;&#1077;&#1082;&#1091;&#1085;&#1076;&#1091;</div><div class="stat-value" id="statRubleSec">0</div></div>
-          <div class="stat-card"><div class="stat-label">&#1059;&#1088;&#1086;&#1074;&#1077;&#1085;&#1100;</div><div class="stat-value" style="color:#a78bfa" id="statLevelVal">1</div></div>
+          <div class="stat-card"><div class="stat-label">Любимая игра</div><div class="stat-value" id="statFavGame">Slots</div></div>
+          <div class="stat-card"><div class="stat-label">Всего сыграно</div><div class="stat-value" id="statGamesPlayed">0</div></div>
+          <div class="stat-card"><div class="stat-label">Побед</div><div class="stat-value" style="color:#4ade80" id="statWins">0</div></div>
+          <div class="stat-card"><div class="stat-label">Проигрышей</div><div class="stat-value" style="color:#f87171" id="statLosses">0</div></div>
+          <div class="stat-card"><div class="stat-label">Побед подряд</div><div class="stat-value" style="color:#fbbf24" id="statWinStreak">0</div></div>
+          <div class="stat-card"><div class="stat-label">Время в игре</div><div class="stat-value" id="statPlayTime">0ч 0м</div></div>
+          <div class="stat-card"><div class="stat-label">Рублей в секунду</div><div class="stat-value" id="statRubleSec">0</div></div>
+          <div class="stat-card"><div class="stat-label">Уровень</div><div class="stat-value" style="color:#a78bfa" id="statLevelVal">1</div></div>
         </div>
       </div>
-
       <div id="profile-tab-achievements" class="profile-tab-content" style="display:none">
         <div id="achievementsList" class="achievements-grid"></div>
       </div>
-
       <div id="profile-tab-daily" class="profile-tab-content" style="display:none">
         <div class="daily-card">
           <div class="daily-mark">GIFT</div>
-          <div class="daily-title" id="dailyStatus">&#1055;&#1088;&#1080;&#1093;&#1086;&#1076;&#1080; &#1079;&#1072;&#1074;&#1090;&#1088;&#1072;!</div>
-          <button id="dailyBtn" class="daily-btn" onclick="claimDailyGift()" style="display:none">&#1055;&#1054;&#1051;&#1059;&#1063;&#1048;&#1058;&#1068; &#1055;&#1054;&#1044;&#1040;&#1056;&#1054;&#1050;</button>
+          <div class="daily-title" id="dailyStatus">Приходи завтра!</div>
+          <button id="dailyBtn" class="daily-btn" onclick="claimDailyGift()" style="display:none">ПОЛУЧИТЬ ПОДАРОК</button>
           <div class="daily-time" id="dailyTime"></div>
         </div>
       </div>
@@ -980,25 +896,129 @@
   <button class="push-notif-close" onclick="closePush()">X</button>
 </div>
 
-<!-- AUDIO -->
-<audio id="sndStart" preload="auto"><source src="ох пойдет щас возня.mp3" type="audio/mpeg"></audio>
-<audio id="sndLose" preload="auto"><source src="mellstroy-ekh-ty-suka.mp3" type="audio/mpeg"></audio>
-<audio id="sndWin" preload="auto"><source src="melstroi-raduetsia.mp3" type="audio/mpeg"></audio>
-<audio id="sndAngry" preload="auto"><source src="melstroi-vozmushchaetsia.mp3" type="audio/mpeg"></audio>
-<audio id="sndRooster" preload="auto"><source src="z_uki-dlya-sosedey-krik-petuha.mp3" type="audio/mpeg"></audio>
-<audio id="sndClick" preload="auto"><source src="cartoon-button-click-sound.mp3" type="audio/mpeg"></audio>
-<audio id="sndTradeLose" preload="auto"><source src="z_uki-dlya-dosto_aniya-sosedey-06 (1).mp3" type="audio/mpeg"></audio>
-<audio id="sndTradeWin" preload="auto"><source src="Voicy_Skolko Na Ui.mp3" type="audio/mpeg"></audio>
-<audio id="sndBigWin" preload="auto"><source src="aaaaa-40-liamov.mp3" type="audio/mpeg"></audio>
-<audio id="sndJackpot1" preload="auto"><source src="i-just-hit-the-jackpot.mp3" type="audio/mpeg"></audio>
-<audio id="sndJackpot2" preload="auto"><source src="money-button.mp3" type="audio/mpeg"></audio>
-<audio id="sndCombo1" preload="auto"><source src="thalmic_chatreceived.mp3" type="audio/mpeg"></audio>
-<audio id="sndCombo2" preload="auto"><source src="thalmic_powerdown.mp3" type="audio/mpeg"></audio>
-<audio id="sndCombo3" preload="auto"><source src="button-click-error-2.mp3" type="audio/mpeg"></audio>
-<audio id="sndPushNotif" preload="auto"><source src="fears-to-fathom-notification-sound.mp3" type="audio/mpeg"></audio>
-<audio id="sndAdClick" preload="auto"><source src="what-a-good-boy.mp3" type="audio/mpeg"></audio>
-
+<!--
+  АУДИО: НЕ используем src в теге audio напрямую — загружаем через JS после клика пользователя.
+  Это критично для GitHub Pages и всех современных браузеров.
+  Файлы с пробелами/спецсимволами в именах нужно кодировать через encodeURIComponent в JS.
+-->
 <script>
+// ============================================================
+// AUDIO SYSTEM — GitHub Pages compatible
+// Главная причина отсутствия звука: браузер блокирует audio.play()
+// до первого взаимодействия пользователя.
+// Решение: создаём AudioContext и audio элементы динамически,
+// загружаем файлы только после первого клика.
+// ============================================================
+
+// Маппинг имён звуков -> имена файлов (БЕЗ переименования!)
+const SOUND_FILES = {
+  sndStart:     'ох пойдет щас возня.mp3',
+  sndLose:      'mellstroy-ekh-ty-suka.mp3',
+  sndWin:       'melstroi-raduetsia.mp3',
+  sndAngry:     'melstroi-vozmushchaetsia.mp3',
+  sndRooster:   'z_uki-dlya-sosedey-krik-petuha.mp3',
+  sndClick:     'cartoon-button-click-sound.mp3',
+  sndTradeLose: 'z_uki-dlya-dosto_aniya-sosedey-06 (1).mp3',
+  sndTradeWin:  'Voicy_Skolko Na Ui.mp3',
+  sndBigWin:    'aaaaa-40-liamov.mp3',
+  sndJackpot1:  'i-just-hit-the-jackpot.mp3',
+  sndJackpot2:  'money-button.mp3',
+  sndCombo1:    'thalmic_chatreceived.mp3',
+  sndCombo2:    'thalmic_powerdown.mp3',
+  sndCombo3:    'button-click-error-2.mp3',
+  sndPushNotif: 'fears-to-fathom-notification-sound.mp3',
+  sndAdClick:   'what-a-good-boy.mp3',
+};
+
+// Кэш загруженных аудио элементов
+const audioCache = {};
+let audioUnlocked = false;
+let masterVolume = 0.6;
+let currentlyPlaying = null;
+
+// Создаём audio элемент с правильным URL (кодируем спецсимволы)
+function createAudio(filename) {
+  const el = document.createElement('audio');
+  el.preload = 'none'; // Не загружаем до первого клика
+  // encodeURIComponent кодирует пробелы и спецсимволы для корректной работы в браузере
+  el.src = encodeURIComponent(filename).replace(/%2F/g, '/');
+  el.volume = masterVolume;
+  return el;
+}
+
+// Получить или создать аудио элемент
+function getAudio(id) {
+  if (!audioCache[id]) {
+    const filename = SOUND_FILES[id];
+    if (!filename) return null;
+    audioCache[id] = createAudio(filename);
+    document.body.appendChild(audioCache[id]);
+  }
+  return audioCache[id];
+}
+
+// Разблокировка аудио при первом взаимодействии
+function unlockAudio() {
+  if (audioUnlocked) return;
+  audioUnlocked = true;
+  
+  // Предзагружаем все звуки после первого клика
+  Object.keys(SOUND_FILES).forEach(id => {
+    const el = getAudio(id);
+    if (el) {
+      el.preload = 'auto';
+      el.load();
+    }
+  });
+}
+
+// Основная функция воспроизведения звука
+function playSound(id, options = {}) {
+  if (!audioUnlocked) return;
+  
+  const el = getAudio(id);
+  if (!el) return;
+  
+  if (options.noInterrupt && currentlyPlaying && currentlyPlaying !== el) return;
+  
+  if (currentlyPlaying && currentlyPlaying !== el && !options.noInterrupt) {
+    currentlyPlaying.pause();
+    currentlyPlaying.currentTime = 0;
+  }
+  
+  const vol = options.volume !== undefined
+    ? Math.max(0, Math.min(1, options.volume * masterVolume))
+    : masterVolume;
+  
+  el.volume = vol;
+  el.currentTime = 0;
+  currentlyPlaying = el;
+  
+  const playPromise = el.play();
+  if (playPromise !== undefined) {
+    playPromise.catch(err => {
+      // Автовоспроизведение заблокировано — это нормально
+      console.log('Audio play blocked:', id, err.message);
+    });
+  }
+  
+  if (options.duration) {
+    setTimeout(() => {
+      if (currentlyPlaying === el) {
+        el.pause();
+        el.currentTime = 0;
+        currentlyPlaying = null;
+      }
+    }, options.duration * 1000);
+  }
+}
+
+function setVolume(v) {
+  masterVolume = v / 100;
+  document.getElementById('volVal').textContent = v + '%';
+  Object.values(audioCache).forEach(a => { if (a) a.volume = masterVolume; });
+}
+
 // ============================================================
 // DB
 // ============================================================
@@ -1011,43 +1031,31 @@ function setCurrentUser(u){localStorage.setItem('mellUser',u||'')}
 // LEADERBOARD STATIC DATA
 // ============================================================
 const LB_NPCS=[
-  {nick:'владелец рублевки',balance:187_540_000,tag:'ЛЕГЕНДА',tagClass:'t-legend',avatar:'🏰',avBg:'linear-gradient(135deg,rgba(251,191,36,.4),rgba(180,120,0,.8))',avBorder:'#fbbf24',isLegend:true},
-  {nick:'никита ботянов',balance:94_200_000,tag:'ТОП-2',tagClass:'t-rival',avatar:'💀',avBg:'linear-gradient(135deg,rgba(192,192,192,.3),rgba(80,80,80,.8))',avBorder:'#c0c0c0',isRival:true},
-  {nick:'MELFAN',balance:52_800_000,tag:'ЭЛИТА',tagClass:'t-elite',avatar:'👑',avBg:'rgba(139,92,246,.3)',avBorder:'rgba(167,139,250,.6)'},
-  {nick:'жирный',balance:31_450_000,tag:'ЭЛИТА',tagClass:'t-elite',avatar:'🐷',avBg:'rgba(139,92,246,.2)',avBorder:'rgba(139,92,246,.4)'},
-  {nick:'армен',balance:18_200_000,tag:'ЭЛИТА',tagClass:'t-elite',avatar:'🔱',avBg:'rgba(139,92,246,.2)',avBorder:'rgba(139,92,246,.4)'},
-  {nick:'банана лорд',balance:12_700_000,tag:'БОГАТЫЙ',tagClass:'t-rich',avatar:'🍌',avBg:'rgba(34,197,94,.2)',avBorder:'rgba(34,197,94,.4)'},
-  {nick:'повелитель',balance:8_880_000,tag:'БОГАТЫЙ',tagClass:'t-rich',avatar:'⚡',avBg:'rgba(139,92,246,.2)',avBorder:'rgba(139,92,246,.4)'},
-  {nick:'джаба',balance:6_340_000,tag:'',tagClass:'',avatar:'🐸',avBg:'rgba(139,92,246,.15)',avBorder:'rgba(139,92,246,.3)'},
-  {nick:'ромаха',balance:4_120_000,tag:'',tagClass:'',avatar:'🎰',avBg:'rgba(139,92,246,.15)',avBorder:'rgba(139,92,246,.3)'},
-  {nick:'мужчина',balance:2_880_000,tag:'',tagClass:'',avatar:'🤵',avBg:'rgba(139,92,246,.15)',avBorder:'rgba(139,92,246,.3)'},
-  {nick:'хуеглот',balance:1_740_000,tag:'',tagClass:'',avatar:'🌀',avBg:'rgba(139,92,246,.12)',avBorder:'rgba(139,92,246,.25)'},
-  {nick:'владимир владимирович',balance:999_000,tag:'',tagClass:'',avatar:'🎖',avBg:'rgba(139,92,246,.12)',avBorder:'rgba(139,92,246,.25)'},
+  {nick:'владелец рублевки',balance:187540000,tag:'ЛЕГЕНДА',tagClass:'t-legend',avatar:'🏰',avBg:'linear-gradient(135deg,rgba(251,191,36,.4),rgba(180,120,0,.8))',avBorder:'#fbbf24',isLegend:true},
+  {nick:'никита ботянов',balance:94200000,tag:'ТОП-2',tagClass:'t-rival',avatar:'💀',avBg:'linear-gradient(135deg,rgba(192,192,192,.3),rgba(80,80,80,.8))',avBorder:'#c0c0c0',isRival:true},
+  {nick:'MELFAN',balance:52800000,tag:'ЭЛИТА',tagClass:'t-elite',avatar:'👑',avBg:'rgba(139,92,246,.3)',avBorder:'rgba(167,139,250,.6)'},
+  {nick:'жирный',balance:31450000,tag:'ЭЛИТА',tagClass:'t-elite',avatar:'🐷',avBg:'rgba(139,92,246,.2)',avBorder:'rgba(139,92,246,.4)'},
+  {nick:'армен',balance:18200000,tag:'ЭЛИТА',tagClass:'t-elite',avatar:'🔱',avBg:'rgba(139,92,246,.2)',avBorder:'rgba(139,92,246,.4)'},
+  {nick:'банана лорд',balance:12700000,tag:'БОГАТЫЙ',tagClass:'t-rich',avatar:'🍌',avBg:'rgba(34,197,94,.2)',avBorder:'rgba(34,197,94,.4)'},
+  {nick:'повелитель',balance:8880000,tag:'БОГАТЫЙ',tagClass:'t-rich',avatar:'⚡',avBg:'rgba(139,92,246,.2)',avBorder:'rgba(139,92,246,.4)'},
+  {nick:'джаба',balance:6340000,tag:'',tagClass:'',avatar:'🐸',avBg:'rgba(139,92,246,.15)',avBorder:'rgba(139,92,246,.3)'},
+  {nick:'ромаха',balance:4120000,tag:'',tagClass:'',avatar:'🎰',avBg:'rgba(139,92,246,.15)',avBorder:'rgba(139,92,246,.3)'},
+  {nick:'мужчина',balance:2880000,tag:'',tagClass:'',avatar:'🤵',avBg:'rgba(139,92,246,.15)',avBorder:'rgba(139,92,246,.3)'},
+  {nick:'хуеглот',balance:1740000,tag:'',tagClass:'',avatar:'🌀',avBg:'rgba(139,92,246,.12)',avBorder:'rgba(139,92,246,.25)'},
+  {nick:'владимир владимирович',balance:999000,tag:'',tagClass:'',avatar:'🎖',avBg:'rgba(139,92,246,.12)',avBorder:'rgba(139,92,246,.25)'},
 ];
 
-// Top 3 are always ahead: we enforce they stay above user
 function getTop3Balances(userBalance){
-  const base=[187_540_000,94_200_000,52_800_000];
+  const base=[187540000,94200000,52800000];
   return base.map(b=>Math.max(b,userBalance+Math.floor(3000+Math.random()*2000)));
 }
 
 // PROMO CODES
 const PROMO_CODES={
-  'Slotoro300':2500,
-  'SLOTOROBIG':2500,
-  'MELLSTART':3000,
-  'PLINKO777':3500,
-  'DODEP500':500,
-  'BURMALDA':4000,
-  'LUCKY100':1000,
-  'VIPBONUS':7500,
-  'FREESPIN':2000,
-  'ARBBTC':3000,
-  'MEGAWIN':5000,
-  'WELCOME':2500,
-  'CASINOX':4500,
-  'STREAM':1500,
-  'BIGDROP':6000
+  'Slotoro300':2500,'SLOTOROBIG':2500,'MELLSTART':3000,'PLINKO777':3500,
+  'DODEP500':500,'BURMALDA':4000,'LUCKY100':1000,'VIPBONUS':7500,
+  'FREESPIN':2000,'ARBBTC':3000,'MEGAWIN':5000,'WELCOME':2500,
+  'CASINOX':4500,'STREAM':1500,'BIGDROP':6000
 };
 let usedPromos={};
 
@@ -1084,17 +1092,14 @@ function doLogin(){
 }
 function doLogout(){saveUserData();setCurrentUser(null);currentUser=null;location.reload();}
 
-let mellOwned=false,mellLevel=0,mellIncome=5;
-let mellInterval=null;
+let mellOwned=false,mellLevel=0,mellIncome=5,mellInterval=null;
 
 function loadUserData(){
   const db=getDB();const u=db.users[currentUser];if(!u)return;
   balance=u.balance||1000;totalWon=u.totalWon||0;
   statDrops=u.statDrops||0;statWins=u.statWins||0;statLoses=u.statLoses||0;
   usedPromos=u.usedPromos||{};
-  mellOwned=u.mellOwned||false;
-  mellLevel=u.mellLevel||0;
-  mellIncome=u.mellIncome||5;
+  mellOwned=u.mellOwned||false;mellLevel=u.mellLevel||0;mellIncome=u.mellIncome||5;
 }
 function saveUserData(){
   if(!currentUser)return;
@@ -1102,26 +1107,35 @@ function saveUserData(){
   Object.assign(db.users[currentUser],{balance,totalWon,statDrops,statWins,statLoses,usedPromos,mellOwned,mellLevel,mellIncome,arbPositions});
   saveDB(db);
 }
+
 function startSession(){
-  loadUserData();
-  loadPlayerStats();
-  startPlayerStatsTimer();
-  document.getElementById('authOverlay').style.display='none';
-  document.getElementById('navUsername').textContent=currentUser;
-  updateBalance();updateStats();
-  gameLoop();initSlots();loadArbPositions();
-  if(mellOwned)activateMellstroy(false);
-  setTimeout(scheduleAd,22000);
-  setTimeout(createFloatingAd,8000);
-  setTimeout(showPush,15000);
-  setInterval(saveUserData,30000);
-  setTimeout(()=>{document.getElementById('introAdOverlay').classList.add('visible');},800);
-  setInterval(showFullscreenAd,2*60*1000);
+  try{
+    loadUserData();
+    loadPlayerStats();
+    startPlayerStatsTimer();
+    document.getElementById('authOverlay').style.display='none';
+    document.getElementById('navUsername').textContent=currentUser;
+    updateBalance();updateStats();
+    if(!initCanvas()){console.log('Canvas init failed');return;}
+    if(typeof gameLoop==='function')gameLoop();
+    if(typeof initSlots==='function')initSlots();
+    if(typeof loadArbPositions==='function')loadArbPositions();
+    if(mellOwned&&typeof activateMellstroy==='function')activateMellstroy(false);
+    setTimeout(scheduleAd,22000);
+    setTimeout(createFloatingAd,8000);
+    setTimeout(showPush,15000);
+    setInterval(saveUserData,30000);
+    setTimeout(()=>{document.getElementById('introAdOverlay').classList.add('visible');},800);
+  }catch(e){console.log('Session start error:',e);}
 }
+
+setInterval(showFullscreenAd,2*60*1000);
+
 function closeIntroAd(){document.getElementById('introAdOverlay').classList.remove('visible');}
 
 // ============================================================
-// FULLSCREEN AD (every 2 min, video loops from start)
+// FULLSCREEN AD VIDEO
+// Видео на GitHub Pages: используем preload="auto" и обрабатываем ошибки
 // ============================================================
 function showFullscreenAd(){
   const videos=['reklama.mp4','reklama1.mp4'];
@@ -1129,14 +1143,33 @@ function showFullscreenAd(){
   const overlay=document.getElementById('fullscreenAdOverlay');
   const vid=document.getElementById('fullscreenAdVideo');
   const countdown=document.getElementById('skipCountdown');
-  vid.src=chosen;vid.volume=0.35;vid.load();vid.loop=true;
-  vid.play().catch(()=>{});
+  if(!vid)return;
+
+  // Кодируем имя файла на случай спецсимволов
+  vid.src=encodeURIComponent(chosen).replace(/%2F/g,'/');
+  vid.volume=Math.min(masterVolume,0.35);
+  vid.muted=false;
+  vid.preload='auto';
+  vid.loop=true;
+  
   overlay.classList.add('visible');
-  let secs=0;countdown.textContent='Реклама';
+  let secs=0;
+  countdown.textContent='Реклама';
   const ci=setInterval(()=>{secs++;countdown.textContent='Реклама · '+secs+'с';},1000);
+  
+  // Пробуем воспроизвести — если браузер заблокирует, показываем muted
+  const playP=vid.play();
+  if(playP){
+    playP.catch(()=>{
+      // Если заблокировано, пробуем muted
+      vid.muted=true;
+      vid.play().catch(()=>{});
+    });
+  }
+  
   vid.onclick=()=>{
-    playSound('sndAdClick',{volume:4});
-    window.open('https://vk.com/@animehouse_one-eta-farforovaya-kukla-vlubilas-75-glava','_blank');
+    playSound('sndAdClick',{volume:0.8});
+    window.open('https://vk.com','_blank');
   };
   overlay._countInterval=ci;
 }
@@ -1154,25 +1187,6 @@ function closeFullscreenAd(){
 let balance=1000,totalWon=0,risk='low',rows=14;
 let balls=[],statDrops=0,statWins=0,statLoses=0;
 let activeBalls=0,selectedBallCount=1;
-let audioUnlocked=false,masterVolume=0.6;
-let currentlyPlaying=null;
-
-// ============================================================
-// AUDIO
-// ============================================================
-function setVolume(v){masterVolume=v/100;document.getElementById('volVal').textContent=v+'%';document.querySelectorAll('audio').forEach(a=>a.volume=masterVolume);}
-function playSound(id,options={}){
-  if(!audioUnlocked)return;
-  const el=document.getElementById(id);if(!el)return;
-  // Если это звук который не должен прерываться и уже что-то играет, игнорируем
-  if(options.noInterrupt&&currentlyPlaying&&currentlyPlaying!==el)return;
-  // Иначе прерываем предыдущий звук
-  if(currentlyPlaying&&currentlyPlaying!==el){currentlyPlaying.pause();currentlyPlaying.currentTime=0;}
-  el.volume=Math.max(0,Math.min(1,options.volume!==undefined?options.volume*masterVolume:masterVolume));
-  el.currentTime=0;currentlyPlaying=el;
-  el.play().catch(()=>{});
-  if(options.duration)setTimeout(()=>{if(currentlyPlaying===el){el.pause();el.currentTime=0;currentlyPlaying=null;}},options.duration*1000);
-}
 
 // ============================================================
 // PAGE NAV
@@ -1188,6 +1202,7 @@ function showPage(name,tabEl){
   if(name==='top')renderTop();
   if(name==='slots')updateSlotsDisplay();
   if(name==='promo'){document.getElementById('promoMsg').textContent='';document.getElementById('promoInput').value='';}
+  if(name==='profile')updateProfile();
 }
 
 // ============================================================
@@ -1219,23 +1234,18 @@ function applyPromo(){
 }
 
 // ============================================================
-// MELLSTROY (DODEP SHOP) + UPGRADES
+// MELLSTROY SHOP
 // ============================================================
-function getMellUpgradeCost(){
-  const base=7000;return Math.round(base*Math.pow(1.4,mellLevel));}
+function getMellUpgradeCost(){return Math.round(7000*Math.pow(1.4,mellLevel));}
 function getMellNextIncome(){return Math.round(mellIncome*1.4);}
-
 function updateMellUpgradeUI(){
   if(!mellOwned)return;
-  const cost=getMellUpgradeCost();
-  const next=getMellNextIncome();
   document.getElementById('mellUpgradeLevel').textContent='Уровень улучшения: '+mellLevel;
-  document.getElementById('mellUpgradeInfo').textContent=mellIncome+'₽/сек → '+next+'₽/сек';
-  document.getElementById('mellUpgradeCost').textContent=cost.toLocaleString('ru')+' ₽';
+  document.getElementById('mellUpgradeInfo').textContent=mellIncome+'₽/сек → '+getMellNextIncome()+'₽/сек';
+  document.getElementById('mellUpgradeCost').textContent=getMellUpgradeCost().toLocaleString('ru')+' ₽';
   document.getElementById('mellIncomeBadge').textContent=mellIncome+'₽/сек';
   document.getElementById('mellIncomeDesc').textContent='+'+mellIncome+' ₽ каждую секунду';
 }
-
 function buyMellstroy(){
   if(mellOwned)return;
   if(balance<5000){showNotif('Недостаточно средств! Нужно 5 000 ₽','lose');return;}
@@ -1243,7 +1253,6 @@ function buyMellstroy(){
   mellOwned=true;mellLevel=0;mellIncome=5;
   activateMellstroy(true);saveUserData();
 }
-
 function upgradeMellstroy(){
   if(!mellOwned)return;
   const cost=getMellUpgradeCost();
@@ -1252,12 +1261,10 @@ function upgradeMellstroy(){
   updateBalance();updateMellUpgradeUI();
   showNotif('Меллстрой улучшен! Теперь +'+mellIncome+'₽/сек','win');
   playSound('sndWin');
-  // Restart interval with new income
   if(mellInterval)clearInterval(mellInterval);
   mellInterval=setInterval(()=>{balance+=mellIncome;updateBalance();},1000);
   saveUserData();
 }
-
 function activateMellstroy(playAnim){
   const card=document.getElementById('mellCard');
   const video=document.getElementById('mellVideo');
@@ -1266,7 +1273,11 @@ function activateMellstroy(playAnim){
   const wrap=document.getElementById('mellVideoWrap');
   card.classList.add('owned');video.classList.add('active');
   overlay.classList.add('hidden');badge.classList.add('visible');wrap.classList.add('active');
-  video.play().catch(()=>{});
+  // Видео в магазине — только после взаимодействия
+  if(audioUnlocked){
+    video.preload='auto';
+    video.play().catch(()=>{});
+  }
   if(playAnim){showNotif('МЕЛЛСТРОЙ КУПЛЕН! +'+mellIncome+'₽/сек','win');spawnCoins();}
   updateMellUpgradeUI();
   if(mellInterval)clearInterval(mellInterval);
@@ -1278,21 +1289,12 @@ function activateMellstroy(playAnim){
 // ============================================================
 function renderTop(){
   const db=getDB();
-  // Get current user balance
-  const userBal=balance;
-  // Compute dynamic top3 balances
-  const top3=getTop3Balances(userBal);
-  // Build NPC list with dynamic top 3
+  const top3=getTop3Balances(balance);
   const npcs=LB_NPCS.map((n,i)=>({...n,balance:i<3?top3[i]:n.balance}));
-
   const realUsers=Object.entries(db.users)
     .filter(([nick])=>!LB_NPCS.find(n=>n.nick.toLowerCase()===nick.toLowerCase()))
     .map(([nick,data])=>({nick,balance:data.balance||0,isReal:true}));
-
-  const pinned1=npcs[0];const pinned2=npcs[1];
-  const rest=[...npcs.slice(2),...realUsers].sort((a,b)=>b.balance-a.balance);
-  const sorted=[pinned1,pinned2,...rest];
-
+  const sorted=[npcs[0],npcs[1],...[...npcs.slice(2),...realUsers].sort((a,b)=>b.balance-a.balance)];
   const list=document.getElementById('topList');list.innerHTML='';
   sorted.forEach((entry,i)=>{
     const rank=i+1;
@@ -1311,13 +1313,8 @@ function renderTop(){
     const youHtml=isMe?`<span class="lb-you-badge">ВЫ</span>`:'';
     const el=document.createElement('div');
     el.className=`lb-item ${itemClass}`;
-    el.innerHTML=`
-      <div class="lb-rank ${rankClass}">${rank===1?'♛':rank}</div>
-      <div class="lb-avatar-inner" style="background:${avBg};border-color:${avBorder}">${avatar}</div>
-      <div class="lb-info">${tagHtml}<div class="lb-name ${nameClass}">${entry.nick}${youHtml}</div></div>
-      <div class="lb-bal-wrap"><div class="lb-bal ${balClass}">${Math.round(entry.balance).toLocaleString('ru')} ₽</div><div class="lb-bal-label">БАЛАНС</div></div>
-    `;
-    if(isMe){el.style.background='linear-gradient(90deg,rgba(20,10,50,.97),rgba(15,8,40,.95))';}
+    el.innerHTML=`<div class="lb-rank ${rankClass}">${rank===1?'♛':rank}</div><div class="lb-avatar-inner" style="background:${avBg};border-color:${avBorder}">${avatar}</div><div class="lb-info">${tagHtml}<div class="lb-name ${nameClass}">${entry.nick}${youHtml}</div></div><div class="lb-bal-wrap"><div class="lb-bal ${balClass}">${Math.round(entry.balance).toLocaleString('ru')} ₽</div><div class="lb-bal-label">БАЛАНС</div></div>`;
+    if(isMe)el.style.background='linear-gradient(90deg,rgba(20,10,50,.97),rgba(15,8,40,.95))';
     list.appendChild(el);
     el.style.opacity='0';el.style.transform='translateX(-20px)';
     setTimeout(()=>{el.style.transition='opacity .4s ease,transform .4s cubic-bezier(.34,1.56,.64,1)';el.style.opacity='1';el.style.transform='translateX(0)';},i*60);
@@ -1332,7 +1329,6 @@ function dodepClick(){
   const btn=document.getElementById('dodepBtn');
   btn.style.transform='scale(.93)';
   setTimeout(()=>btn.style.transform='',100);
-  // No float text — removed as requested
 }
 
 // ============================================================
@@ -1340,7 +1336,6 @@ function dodepClick(){
 // ============================================================
 let btcCurrentPrice=65000,btcPriceHistory=[{time:Date.now(),price:65000}],arbPositions=[];
 let arbAutoCloseTimers={};
-
 function saveArbPositions(){if(!currentUser)return;const db=getDB();if(!db.users[currentUser])return;db.users[currentUser].arbPositions=arbPositions;saveDB(db);}
 function loadArbPositions(){
   if(!currentUser)return;const db=getDB();const u=db.users[currentUser];
@@ -1366,27 +1361,14 @@ async function fetchBtcStats(){
     updateBtcChangeDisplays(null);
   }
 }
-function pushBtcPrice(price){
-  btcPriceHistory.push({time:Date.now(),price});
-  const cutoff=Date.now()-70*60*1000;
-  btcPriceHistory=btcPriceHistory.filter(p=>p.time>=cutoff);
-}
-function getBtcChangeSince(ms){
-  const target=Date.now()-ms;
-  let base=btcPriceHistory[0];
-  for(const point of btcPriceHistory){if(point.time<=target)base=point;else break;}
-  if(!base||!base.price)return 0;
-  return (btcCurrentPrice-base.price)/base.price*100;
-}
+function pushBtcPrice(price){btcPriceHistory.push({time:Date.now(),price});const cutoff=Date.now()-70*60*1000;btcPriceHistory=btcPriceHistory.filter(p=>p.time>=cutoff);}
+function getBtcChangeSince(ms){const target=Date.now()-ms;let base=btcPriceHistory[0];for(const point of btcPriceHistory){if(point.time<=target)base=point;else break;}if(!base||!base.price)return 0;return(btcCurrentPrice-base.price)/base.price*100;}
 function updateBtcChangeDisplays(chg24){
   const ch5m=getBtcChangeSince(5*60*1000),ch1h=getBtcChangeSince(60*60*1000);
   const el5=document.getElementById('btcChange5m'),el1h=document.getElementById('btcChange1h');
   el5.textContent=(ch5m>=0?'+':'')+ch5m.toFixed(2)+'%';el5.className='btc-stat-val '+(ch5m>=0?'up':'down');
   el1h.textContent=(ch1h>=0?'+':'')+ch1h.toFixed(2)+'%';el1h.className='btc-stat-val '+(ch1h>=0?'up':'down');
-  if(chg24!==null&&chg24!==undefined){
-    const el24=document.getElementById('btcChange24h');
-    el24.textContent=(chg24>=0?'+':'')+chg24.toFixed(2)+'%';el24.className='btc-stat-val '+(chg24>=0?'up':'down');
-  }
+  if(chg24!==null&&chg24!==undefined){const el24=document.getElementById('btcChange24h');el24.textContent=(chg24>=0?'+':'')+chg24.toFixed(2)+'%';el24.className='btc-stat-val '+(chg24>=0?'up':'down');}
 }
 async function openPosition(type){
   const amount=parseInt(document.getElementById('arbAmount').value)||100;
@@ -1435,8 +1417,15 @@ const MULTIPLIERS={
   low:{8:[3.5,1.5,1,.5,.3,.5,1,1.5,3.5],10:[4,1.8,1.2,.8,.4,.2,.4,.8,1.2,1.8,4],12:[5,2,1.4,1,.6,.3,.2,.3,.6,1,1.4,2,5],14:[6,2.5,1.5,1.1,.8,.5,.3,.2,.3,.5,.8,1.1,1.5,2.5,6],16:[7,3,2,1.4,1,.7,.4,.2,.1,.2,.4,.7,1,1.4,2,3,7]},
   high:{8:[10,2,.6,.15,.08,.15,.6,2,10],10:[22,4,1.2,.3,.08,.04,.08,.3,1.2,4,22],12:[45,10,2.5,.7,.2,.07,.03,.07,.2,.7,2.5,10,45],14:[90,18,5,1.8,.6,.25,.07,.03,.07,.25,.6,1.8,5,18,90],16:[180,35,10,3.5,1.2,.5,.2,.06,.03,.06,.2,.5,1.2,3.5,10,35,180]}
 };
-const canvas=document.getElementById('plinko');const ctx=canvas.getContext('2d');const W=500,H=520;
-
+let canvas,ctx,W=500,H=520;
+function initCanvas(){
+  if(canvas)return true;
+  canvas=document.getElementById('plinko');
+  if(!canvas)return false;
+  ctx=canvas.getContext('2d');
+  W=canvas.width||500;H=canvas.height||520;
+  return true;
+}
 function getPins(){
   const pins=[];const topPad=50;const sidePad=36;const usableW=W-sidePad*2;const usableH=H-topPad-85;
   for(let r=0;r<rows;r++){const count=r+3;const rowSpacing=usableW/(count+1);const y=topPad+(r/(rows-1))*usableH;for(let c=0;c<count;c++)pins.push({x:sidePad+rowSpacing*(c+1),y});}
@@ -1450,8 +1439,8 @@ function getSlots(){
 }
 function multColor(m){if(m>=50)return'#a78bfa';if(m>=10)return'#8b5cf6';if(m>=3)return'#7c3aed';if(m>=1.5)return'#9d6fff';if(m>=.8)return'#6d5fac';if(m>=.3)return'#5c4a8a';return'#4a3a70';}
 function drawDiamond(cx,cy,r){ctx.beginPath();ctx.moveTo(cx,cy-r);ctx.lineTo(cx+r,cy);ctx.lineTo(cx,cy+r);ctx.lineTo(cx-r,cy);ctx.closePath();}
-
 function drawBoard(){
+  if(!ctx)return;
   ctx.clearRect(0,0,W,H);
   const bg=ctx.createLinearGradient(0,0,0,H);bg.addColorStop(0,'rgba(8,4,22,.99)');bg.addColorStop(1,'rgba(3,1,10,.99)');
   ctx.fillStyle=bg;ctx.fillRect(0,0,W,H);
@@ -1514,7 +1503,10 @@ function updateBalls(){
   });
   balls=balls.filter(b=>!(b.done&&(b.alpha===undefined||b.alpha<=0)));
 }
-function gameLoop(){updateBalls();drawBoard();requestAnimationFrame(gameLoop);}
+function gameLoop(){
+  if(!ctx)return;
+  updateBalls();drawBoard();requestAnimationFrame(gameLoop);
+}
 function dropBalls(){
   const bet=parseInt(document.getElementById('betInput').value)||50;
   const totalBet=bet*selectedBallCount;
@@ -1542,7 +1534,9 @@ function spawnCoins(){
   for(let i=0;i<40;i++){setTimeout(()=>{const c=document.createElement('div');c.className='coin';c.textContent=symbols[Math.floor(Math.random()*symbols.length)];c.style.left=Math.random()*100+'vw';c.style.color=['#a78bfa','#c4b5fd','#fbbf24','#fff','#ddd6fe'][Math.floor(Math.random()*5)];c.style.fontSize=(16+Math.random()*20)+'px';c.style.animationDuration=(1.5+Math.random()*2)+'s';document.body.appendChild(c);setTimeout(()=>c.remove(),3500);},i*60);}
 }
 function updateStats(){
-  document.getElementById('statDrops').textContent=statDrops;document.getElementById('statWins').textContent=statWins;document.getElementById('statLoses').textContent=statLoses;
+  document.getElementById('statDrops').textContent=statDrops;
+  document.getElementById('statWins').textContent=statWins;
+  document.getElementById('statLoses').textContent=statLoses;
   document.getElementById('statWinRate').textContent=statDrops>0?Math.round(statWins/statDrops*100)+'%':'-';
 }
 function addHistory(mult,bet,won){
@@ -1561,25 +1555,26 @@ function setRisk(r,el){risk=r;document.querySelectorAll('.risk-btn').forEach(b=>
 function setRows(v){rows=parseInt(v);document.getElementById('rowsLabel').textContent=rows;}
 
 // ============================================================
-// SLOTS — NO CASCADE, 1 SPIN = 1 SPIN
+// SLOTS
 // ============================================================
 const SLOT_SYMBOLS=[
-  {img:'image-removebg-preview (12).png',weight:2,value:0,isBomb:true,label:'BOMB',imgScale:1.0},
-  {img:'image-removebg-preview (13).png',weight:30,value:.5,isBomb:false,label:'SYM1',imgScale:1.1},
-  {img:'image-removebg-preview (14).png',weight:28,value:.55,isBomb:false,label:'SYM2',imgScale:1.1},
-  {img:'image-removebg-preview (15).png',weight:26,value:.7,isBomb:false,label:'SYM3',imgScale:1.1},
-  {img:'image-removebg-preview (10).png',weight:22,value:.8,isBomb:false,label:'SYM4',imgScale:1.1},
-  {img:'image-removebg-preview (11).png',weight:16,value:1.1,isBomb:false,label:'SYM5',imgScale:1.1},
-  {img:'image-removebg-preview (9).png',weight:12,value:1.4,isBomb:false,label:'SYM6',imgScale:2.0},
-  {img:'image-removebg-preview (8).png',weight:8,value:2.0,isBomb:false,label:'SYM7',imgScale:2.0},
-  {img:'image-removebg-preview (7).png',weight:4,value:3.5,isBomb:false,label:'SYM8',imgScale:1.1},
+  {img:'image-removebg-preview%20(12).png',weight:2,value:0,isBomb:true,label:'BOMB',imgScale:1.0},
+  {img:'image-removebg-preview%20(13).png',weight:30,value:.5,isBomb:false,label:'SYM1',imgScale:1.1},
+  {img:'image-removebg-preview%20(14).png',weight:28,value:.55,isBomb:false,label:'SYM2',imgScale:1.1},
+  {img:'image-removebg-preview%20(15).png',weight:26,value:.7,isBomb:false,label:'SYM3',imgScale:1.1},
+  {img:'image-removebg-preview%20(10).png',weight:22,value:.8,isBomb:false,label:'SYM4',imgScale:1.1},
+  {img:'image-removebg-preview%20(11).png',weight:16,value:1.1,isBomb:false,label:'SYM5',imgScale:1.1},
+  {img:'image-removebg-preview%20(9).png',weight:12,value:1.4,isBomb:false,label:'SYM6',imgScale:2.0},
+  {img:'image-removebg-preview%20(8).png',weight:8,value:2.0,isBomb:false,label:'SYM7',imgScale:2.0},
+  {img:'image-removebg-preview%20(7).png',weight:4,value:3.5,isBomb:false,label:'SYM8',imgScale:1.1},
 ];
 const COLS=6,SLOT_ROWS=5;
-let slotsGrid=[];let slotsSpinning=false;
-
+let slotsGrid=[],slotsSpinning=false;
 function makeSymbolImg(symIdx){
-  const sym=SLOT_SYMBOLS[symIdx];const img=document.createElement('img');img.src=sym.img;img.alt=sym.label;
-  const size=Math.round(50*sym.imgScale);img.style.width=size+'px';img.style.height=size+'px';img.style.maxWidth='none';img.draggable=false;return img;
+  const sym=SLOT_SYMBOLS[symIdx];const img=document.createElement('img');
+  img.src=sym.img;img.alt=sym.label;
+  const size=Math.round(50*sym.imgScale);img.style.width=size+'px';img.style.height=size+'px';img.style.maxWidth='none';img.draggable=false;
+  return img;
 }
 function weightedRandom(excludeBomb){
   const weights=SLOT_SYMBOLS.map((s,i)=>(excludeBomb&&s.isBomb)?0:s.weight);
@@ -1588,28 +1583,12 @@ function weightedRandom(excludeBomb){
 }
 function decideOutcome(isBonusSpin){
   const r=Math.random();
-  if(isBonusSpin){
-    // Бонусные раунды: более честные вероятности, не гарантированный выигрыш
-    if(r<.55)return'dead';    // 55% - ничего (было 38%)
-    if(r<.78)return'small';   // 23% - маленький (было 30%)
-    if(r<.90)return'good';    // 12% - хороший (было 18%)
-    if(r<.97)return'big';     // 7% - большой (было 9%)
-    return'huge';             // 3% - огромный (было 5%)
-  }
-  else{
-    if(r<.62)return'dead';
-    if(r<.84)return'small';
-    if(r<.94)return'good';
-    if(r<.98)return'big';
-    return'huge';
-  }
+  if(isBonusSpin){if(r<.55)return'dead';if(r<.78)return'small';if(r<.90)return'good';if(r<.97)return'big';return'huge';}
+  else{if(r<.62)return'dead';if(r<.84)return'small';if(r<.94)return'good';if(r<.98)return'big';return'huge';}
 }
 function generateBiasedGrid(outcome){
   const grid=[];for(let c=0;c<COLS;c++){grid[c]=[];for(let r=0;r<SLOT_ROWS;r++)grid[c][r]=-1;}
-  if(outcome==='dead'){
-    for(let c=0;c<COLS;c++)for(let r=0;r<SLOT_ROWS;r++)grid[c][r]=weightedRandom(true);
-    return grid;
-  }
+  if(outcome==='dead'){for(let c=0;c<COLS;c++)for(let r=0;r<SLOT_ROWS;r++)grid[c][r]=weightedRandom(true);return grid;}
   const targetMap={small:8,good:10,big:12,huge:14};const target=targetMap[outcome]||8;
   let symPool;
   if(outcome==='small')symPool=[1,1,1,2,2,2,3,3,4,4,5];
@@ -1634,9 +1613,7 @@ function calculateSlotsWin(grid,bet){
   if(winCells.length>0&&bombCells.length>0){totalMult*=10;bombTriggered=true;winCells.push(...bombCells);}
   return{totalMult:Math.round(totalMult*100)/100,winCells,bombTriggered};
 }
-
 let bonusSpinsLeft=0,isBonusSpin=false,bonusTotalWin=0,bonusActive=false,bonusSpinBet=50;
-
 function initSlots(){slotsGrid=generateBiasedGrid('dead');renderSlots();}
 function renderSlots(winCells,dimAll){
   const grid=document.getElementById('slotGrid');grid.innerHTML='';
@@ -1654,7 +1631,6 @@ function updateSpinCounter(){
   if(bonusSpinsLeft>0)pill.classList.add('active');else pill.classList.remove('active');
   if(!slotsSpinning)document.getElementById('slotsSpinBtn').disabled=false;
 }
-
 async function buyBonus(cost,betPerSpin){
   if(cost>balance){showNotif('Недостаточно средств!','lose');return;}
   if(bonusSpinsLeft>0){showNotif('Бонуска уже активна!','lose');return;}
@@ -1675,7 +1651,6 @@ async function buyBonus(cost,betPerSpin){
   else showNotif('Бонуска закончилась...','scam');
   bonusTotalWin=0;
 }
-
 async function slotsSpin(){
   if(slotsSpinning)return;
   if(bonusSpinsLeft>0)return;
@@ -1685,12 +1660,10 @@ async function slotsSpin(){
   balance-=bet;updateBalance();
   await doOneSpin(bet,false);
 }
-
-// ONE SPIN = ONE SPIN, no cascade
 async function doOneSpin(bet,isBonusRound){
   if(slotsSpinning)return;
   slotsSpinning=true;
-  if(!isBonusRound){document.getElementById('slotsSpinBtn').disabled=true;}
+  if(!isBonusRound)document.getElementById('slotsSpinBtn').disabled=true;
   document.getElementById('slotsWinDisplay').textContent='';document.getElementById('slotsWinPill').style.display='none';
   const outcome=decideOutcome(isBonusRound);const newGrid=generateBiasedGrid(outcome);
   await animateSlotsFall(newGrid);slotsGrid=newGrid;
@@ -1700,7 +1673,6 @@ async function doOneSpin(bet,isBonusRound){
     renderSlots(winCells,true);await delay(400);
     if(bombTriggered)await showBombEffect();
     await explodeWinCells(winCells);await delay(200);
-    // Payout immediately — no cascade
     const totalWinAmt=Math.round(bet*totalMult);
     if(totalWinAmt>0){
       const cappedWin=Math.min(totalWinAmt,bet*2000);
@@ -1715,10 +1687,10 @@ async function doOneSpin(bet,isBonusRound){
       if(xMult>=50)showSlotsBigWin('MEGA WIN',xMult,cappedWin);
       else if(xMult>=20)showSlotsBigWin('BIG WIN',xMult,cappedWin);
       else if(xMult>=8)showSlotsBigWin('WIN',xMult,cappedWin);
-      else{showNotif('+'+cappedWin.toLocaleString('ru')+' ₽ ('+xMult+'x)','win');}
+      else showNotif('+'+cappedWin.toLocaleString('ru')+' ₽ ('+xMult+'x)','win');
     }
     renderSlots();
-  } else {
+  }else{
     renderSlots();
     if(!isBonusRound)showNotif('Не повезло — следующий твой!','lose');
   }
@@ -1726,33 +1698,26 @@ async function doOneSpin(bet,isBonusRound){
   slotsSpinning=false;
   if(!isBonusRound)document.getElementById('slotsSpinBtn').disabled=false;
 }
-
 function delay(ms){return new Promise(r=>setTimeout(r,ms));}
-
 async function showBombEffect(){
   const grid=document.getElementById('slotGrid');const cells=grid.querySelectorAll('.slot-cell.bomb-cell');
   cells.forEach(cell=>{cell.classList.remove('bomb-cell');cell.classList.add('bomb-reveal');});await delay(500);
   const flash=document.createElement('div');flash.style.cssText='position:fixed;inset:0;background:rgba(255,150,0,.22);z-index:69999;pointer-events:none;animation:flashFade .7s ease forwards';document.body.appendChild(flash);
-  const popup=document.createElement('div');popup.style.cssText=`position:fixed;top:50%;left:50%;transform:translate(-50%,-50%) scale(0);z-index:70000;font-family:'Bebas Neue',cursive;font-size:clamp(50px,10vw,90px);line-height:1;text-align:center;color:#fff;text-shadow:0 0 60px rgba(255,150,0,1);pointer-events:none;animation:bombPop 1.8s cubic-bezier(.34,1.56,.64,1) forwards;`;
-  popup.innerHTML=`<div style="font-size:.6em;color:rgba(255,200,100,.8);letter-spacing:4px;margin-bottom:6px">BOMB</div>x10!`;
+  const popup=document.createElement('div');popup.style.cssText='position:fixed;top:50%;left:50%;transform:translate(-50%,-50%) scale(0);z-index:70000;font-family:\'Bebas Neue\',cursive;font-size:clamp(50px,10vw,90px);line-height:1;text-align:center;color:#fff;text-shadow:0 0 60px rgba(255,150,0,1);pointer-events:none;animation:bombPop 1.8s cubic-bezier(.34,1.56,.64,1) forwards;';
+  popup.innerHTML='<div style="font-size:.6em;color:rgba(255,200,100,.8);letter-spacing:4px;margin-bottom:6px">BOMB</div>x10!';
   document.body.appendChild(popup);await delay(1800);popup.remove();flash.remove();
 }
-
 async function animateSlotsFall(newGrid){
   const grid=document.getElementById('slotGrid');const cells=grid.querySelectorAll('.slot-cell');
   for(let c=0;c<COLS;c++){await delay(45);for(let r=0;r<SLOT_ROWS;r++){const idx=r*COLS+c;const cell=cells[idx];const symIdx=newGrid[c][r];setTimeout(()=>{cell.innerHTML='';cell.appendChild(makeSymbolImg(symIdx));cell.classList.remove('bouncing','winning','dimmed','bomb-cell','bomb-reveal','exploding');void cell.offsetWidth;cell.classList.add('bouncing');},r*50);}}
   await delay(SLOT_ROWS*50+380);
 }
-
 let lastComboSoundIndex=-1;
-
 async function explodeWinCells(winCells){
   const grid=document.getElementById('slotGrid');const cells=grid.querySelectorAll('.slot-cell');
-  // Играем звук комбо (если есть выигрышные клетки)
   if(winCells.length>0){
     const comboSounds=['sndCombo1','sndCombo2','sndCombo3'];
     let nextIdx=Math.floor(Math.random()*comboSounds.length);
-    // Не повторяем один и тот же звук подряд
     while(nextIdx===lastComboSoundIndex&&comboSounds.length>1)nextIdx=Math.floor(Math.random()*comboSounds.length);
     lastComboSoundIndex=nextIdx;
     playSound(comboSounds[nextIdx],{volume:0.3});
@@ -1760,32 +1725,27 @@ async function explodeWinCells(winCells){
   for(const{c,r}of winCells){const idx=r*COLS+c;const cell=cells[idx];cell.classList.add('exploding');spawnCandyParticle(cell);}
   await delay(420);
 }
-
 function spawnCandyParticle(cell){
   const rect=cell.getBoundingClientRect();const cx=rect.left+rect.width/2;const cy=rect.top+rect.height/2;
   const shapes=['★','◆','●','▲','✦'];
   for(let i=0;i<4;i++){const p=document.createElement('div');p.className='candy-piece';p.textContent=shapes[Math.floor(Math.random()*shapes.length)];p.style.cssText+=`color:${['#ff6b9d','#ffd700','#a78bfa','#ff9d00','#4ade80'][Math.floor(Math.random()*5)]};font-size:${18+Math.random()*16}px`;p.style.left=(cx+(Math.random()-.5)*50)+'px';p.style.top=cy+'px';p.style.animationDuration=(.7+Math.random()*.8)+'s';document.body.appendChild(p);setTimeout(()=>p.remove(),1600);}
 }
-
 function showSlotsBigWin(label,xMult,amount){
-  // Играем случайный звук джекпота если выигрыш большой (1.5x или больше)
-  if(xMult>=1.5){
-    const jackpotSounds=['sndJackpot1','sndJackpot2'];
-    const chosen=jackpotSounds[Math.floor(Math.random()*jackpotSounds.length)];
-    playSound(chosen,{volume:0.45});
-  }
-  document.getElementById('sbwTitle').textContent=label;document.getElementById('sbwAmount').textContent='+'+amount.toLocaleString('ru')+' ₽ ('+xMult+'x)';
+  const jackpotSounds=['sndJackpot1','sndJackpot2','sndTradeWin'];
+  const chosen=jackpotSounds[Math.floor(Math.random()*jackpotSounds.length)];
+  playSound(chosen,{volume:0.5});
+  document.getElementById('sbwTitle').textContent=label;
+  document.getElementById('sbwAmount').textContent='+'+amount.toLocaleString('ru')+' ₽ ('+xMult+'x)';
   document.getElementById('slotsBigWin').classList.add('active');spawnCandyRain();
   setTimeout(()=>{document.getElementById('slotsBigWin').classList.remove('active');document.querySelectorAll('.candy-piece').forEach(c=>c.remove());},4500);
 }
-
 function spawnCandyRain(){
   const shapes=['★','◆','●','▲','✦','♦','◉'];
   for(let i=0;i<60;i++)setTimeout(()=>{const c=document.createElement('div');c.className='candy-piece';c.textContent=shapes[Math.floor(Math.random()*shapes.length)];c.style.left=Math.random()*100+'vw';c.style.animationDuration=(1.5+Math.random()*2)+'s';c.style.fontSize=(18+Math.random()*22)+'px';c.style.color=['#ff6b9d','#ffd700','#a78bfa','#ff9d00','#4ade80','#38bdf8'][Math.floor(Math.random()*6)];document.body.appendChild(c);setTimeout(()=>c.remove(),4000);},i*60);
 }
 
 // ============================================================
-// PUSH
+// PUSH NOTIF
 // ============================================================
 const pushMessages=['Меллстрой в 10 метрах от вас','Меллстрой смотрит за вами','Меллстрой рядом — не проигрывай','Меллстрой видит твой баланс'];
 function showPush(){const el=document.getElementById('pushNotif');document.getElementById('pushNotifText').textContent=pushMessages[Math.floor(Math.random()*pushMessages.length)];playSound('sndPushNotif',{volume:0.4});el.classList.add('visible');setTimeout(()=>el.classList.remove('visible'),7000);}
@@ -1793,54 +1753,41 @@ function closePush(){document.getElementById('pushNotif').classList.remove('visi
 setInterval(showPush,4*60*1000);
 
 // ============================================================
-// FLOATING ADS - новая система с большим числом реклам
+// FLOATING ADS — видео кодируем через encodeURIComponent
 // ============================================================
-function getRandomPromo(){
-  const codes=Object.keys(PROMO_CODES);
-  return codes[Math.floor(Math.random()*codes.length)];
+function encodeMediaSrc(filename){
+  return encodeURIComponent(filename).replace(/%2F/g,'/');
 }
-// Обычные рекламы (90% вероятность)
+
 const floatingAdDataNonPromo=[
-  {title:'МЕЛЛСТРОЙ ОТКРЫЛ КАЗИНО',desc:'Заходи прямо сейчас — получи 500 тысяч бонусных рублей! Ограниченная акция только для своих.',cta:'ПОЛУЧИТЬ 500К',media:'wxxUYDkzuPKOs042ly4hK4JPMKt0U02e.png'},
-  {title:'МЕЛЛСТРОЙ РАЗДАЁТ ЛАМБУ',desc:'Lamborghini Urus 2024 достанется одному счастливчику. Меллстрой лично вручит ключи!',cta:'УЧАСТВОВАТЬ',media:'7b7565415a27ef6efe4a966fd27d6b8f.jpg'},
-  {title:'GIVEAWAY: 1 000 000 ₽',desc:'Меллстрой раздаёт МИЛЛИОН рублей подписчикам! Ты уже в списке победителей?',cta:'ПРОВЕРИТЬ',media:'90dd360bf4a2abc93153c5ac42988309.png'},
-  {title:'СТРИМ СЕГОДНЯ 23:00',desc:'Меллстрой раздаёт бабки прямо в чате. Каждый зритель получает шанс на 100 000 рублей!',cta:'ПОДПИСАТЬСЯ',media:'maxresdefault (2).jpg'},
-  {title:'МЕГАБОНУС ЖДЁТ ТЕБЯ',desc:'Все новые пользователи получают 100 000 рублей! Спеши — предложение заканчивается через 2 часа.',cta:'ПОЛУЧИТЬ БОНУС',media:'b693e6beaa5c34989ff39cdf8d08f30f.jpg'},
-  {title:'СТАВЬ НА ПОБЕДУ',desc:'Спортивные ставки только у нас! Каждая ставка имеет коэффициент х3. Меллстрой проверит твой выбор!',cta:'НАЧАТЬ СТАВИТЬ',media:'1644912908_1-abrakadabra-fun-p-krutie-oboi-dedpul-1.png'},
-  {title:'РЕЙТИНГ ИГРОКОВ',desc:'Посмотри где ты стоишь в рейтинге всех игроков казино! Поднимайся в топ 3!',cta:'ОТКРЫТЬ РЕЙТИНГ',media:'hq720.jpg'},
-  {title:'ЭТО ПРОИЗОШЛО СЕГОДНЯ',desc:'Мировой рекорд по выигрышу в казино! Нужно видеть как Меллстрой реагировал!',cta:'ПОСМОТРЕТЬ',media:'hqdefault.jpg'},
-  {title:'НОВАЯ ФИШКА',desc:'Меллстрой добавил новую игру в казино! Попробуй прямо сейчас и выигрывай больше!',cta:'ПОПРОБОВАТЬ',media:'images (1).jpeg'},
-  {title:'ВИДЕО РАЗОРИЛАСЬ',desc:'Девушка разорилась в казино... Смотри как она восстановилась за 10 минут!',cta:'СМОТРЕТЬ',media:'images (3).jpeg'},
-  {title:'ТОПОВАЯ ИГРА',desc:'Самая популярная игра в казино Меллстроя! Проверь сам почему все в неё играют!',cta:'ИГРАТЬ',media:'images (4).jpeg'},
-  {title:'МЕГА ПРИЗ',desc:'Каждый час в казино разыгрывается приз в 100 000 рублей! Ты можешь выиграть!',cta:'УЧАСТВОВАТЬ',media:'jAi6WE2tU9Ozql64KGzNlKaW28Y0NfyttENe9HgaIjLeaZnQdh89wWnOems6VV6lRo8.png'},
-  {title:'ЧУДО СЛУЧИЛОСЬ',desc:'Человек выиграл 10 000 000 рублей в казино Меллстроя! Смотри историю успеха!',cta:'ВДОХНОВИТЬСЯ',media:'images.jpeg'},
-  {title:'ПРЯМОЙ ЭФИР СЕЙЧАС',desc:'Меллстрой прямо сейчас раздаёт деньги в казино! Подключайся к стриму!',cta:'СМОТРЕТЬ СТРИМ',media:'photo_2024-02-29_20-00-03-947x800.jpg'},
-  {title:'НОВАЯ ФИШКА КАЗИНО',desc:'Что-то новое добавилось в казино и люди уже выигрывают! Попробуй первым!',cta:'ПРИСОЕДИНИТЬСЯ',media:'photo_2025-02-11_19-45-14.jpg'},
+  {title:'МЕЛЛСТРОЙ ОТКРЫЛ КАЗИНО',desc:'Заходи прямо сейчас — получи 500 тысяч бонусных рублей!',cta:'ПОЛУЧИТЬ 500К',media:'maxresdefault%20(2).jpg'},
+  {title:'МЕЛЛСТРОЙ РАЗДАЁТ ЛАМБУ',desc:'Lamborghini Urus 2024 достанется одному счастливчику.',cta:'УЧАСТВОВАТЬ',media:'7b7565415a27ef6efe4a966fd27d6b8f.jpg'},
+  {title:'GIVEAWAY: 1 000 000 ₽',desc:'Меллстрой раздаёт МИЛЛИОН рублей подписчикам!',cta:'ПРОВЕРИТЬ',media:'90dd360bf4a2abc93153c5ac42988309.png'},
+  {title:'СТРИМ СЕГОДНЯ 23:00',desc:'Меллстрой раздаёт бабки прямо в чате.',cta:'ПОДПИСАТЬСЯ',media:'hq720.jpg'},
+  {title:'МЕГАБОНУС ЖДЁТ ТЕБЯ',desc:'Все новые пользователи получают 100 000 рублей!',cta:'ПОЛУЧИТЬ БОНУС',media:'b693e6beaa5c34989ff39cdf8d08f30f.jpg'},
 ];
-// Промокоды (10% вероятность)
 const floatingAdDataPromo=[
-  {title:'ПРОМОКОД '+getRandomPromo(),desc:'Введи этот промокод и получи ' + PROMO_CODES[getRandomPromo()] + ' рублей прямо на баланс!',cta:'ВВЕСТИ ПРОМОКОД',isPromo:true},
-  {title:'ПРОМОКОД '+getRandomPromo(),desc:'Введи промокод в разделе "Промокоды" и получи бонус! Предложение ограничено — успей до конца сессии.',cta:'АКТИВИРОВАТЬ',isPromo:true},
-  {title:'БОНУС-КОД: '+getRandomPromo(),desc:'Скопируй код и введи его в казино. Получи ' + PROMO_CODES[getRandomPromo()] + ' рублей мгновенно!',cta:'ВВЕСТИ',isPromo:true},
-  {title:'ПРОМОКОД ДНЯ: '+getRandomPromo(),desc:'Скорее! Этот промокод действует только сегодня и дарует '+PROMO_CODES[getRandomPromo()]+' ₽ на баланс!',cta:'АКТИВИРОВАТЬ',isPromo:true},
+  {title:'ПРОМОКОД MELLSTART',desc:'Введи MELLSTART и получи 3000 рублей прямо на баланс!',cta:'ВВЕСТИ ПРОМОКОД',isPromo:true},
+  {title:'ПРОМОКОД BURMALDA',desc:'Введи BURMALDA в разделе "Промокоды" и получи 4000 рублей!',cta:'АКТИВИРОВАТЬ',isPromo:true},
+  {title:'ПРОМОКОД PLINKO777',desc:'Введи PLINKO777 и получи 3500 рублей на игру!',cta:'ВВЕСТИ',isPromo:true},
 ];
-// Видеорекламы (всегда будут видео с максимальной частотой)
+
+// Видеорекламы: кодируем имена файлов для URL
 const floatingAdDataVideo=[
-  {title:'НОВОЕ ВИДЕО',desc:'Меллстрой провел огромный стрим в казино и раздал миллион! Смотри архив сейчас!',cta:'СМОТРЕТЬ АРХИВ',media:'Download - 2026-05-07T201459.532.mp4',isVideo:true},
-  {title:'ВЗРЫВ В КАЗИНО',desc:'Что-то невероятное произошло в казино Меллстроя! Смотри видео немедленно!',cta:'СМОТРЕТЬ ВИДЕО',media:'Download - 2026-05-07T201528.508.mp4',isVideo:true},
-  {title:'ОГРОМНЫЙ ВЫВОД',desc:'Вывод 5 000 000 рублей в казино Меллстроя! Это просто пушка!',cta:'НАЧАТЬ ВЫИГРЫВАТЬ',media:'Download - 2026-05-07T201702.439.mp4',isVideo:true},
-  {title:'НЕВЕРОЯТНОЕ ВИДЕО',desc:'Меллстрой распаковал новую машину в прямом эфире! Смотри как он её разыграет в казино!',cta:'СМОТРЕТЬ',media:'generated_video_08bb9c1c-5c47-47bc-a307-8fb4e44fd2a6.mp4',isVideo:true},
-  {title:'ЧЕСТНАЯ ИГРА',desc:'Все ставки в казино Меллстроя честные и прозрачные! Выигрывай без страха!',cta:'НАЧАТЬ ИГРУ',media:'IMG_9110-1.mp4',isVideo:true},
-  {title:'ВИДЕО ДНЯ',desc:'Самое популярное видео на канале! Меллстрой раздаёт 1 миллион в казино!',cta:'СМОТРЕТЬ',media:'VID_20241031_221426_680 (2).mp4',isVideo:true},
+  {title:'ВЗРЫВ В КАЗИНО',desc:'Что-то невероятное произошло в казино Меллстроя!',cta:'СМОТРЕТЬ',media:'Download%20-%202026-05-07T201459.532.mp4',isVideo:true},
+  {title:'ОГРОМНЫЙ ВЫВОД',desc:'Вывод 5 000 000 рублей в казино Меллстроя!',cta:'НАЧАТЬ ВЫИГРЫВАТЬ',media:'Download%20-%202026-05-07T201528.508.mp4',isVideo:true},
+  {title:'НОВОЕ ВИДЕО',desc:'Меллстрой провел огромный стрим в казино!',cta:'СМОТРЕТЬ АРХИВ',media:'Download%20-%202026-05-07T201702.439.mp4',isVideo:true},
+  {title:'ЧЕСТНАЯ ИГРА',desc:'Все ставки в казино Меллстроя честные!',cta:'НАЧАТЬ ИГРУ',media:'IMG_9110-1.mp4',isVideo:true},
+  {title:'ВИДЕО ДНЯ',desc:'Самое популярное видео на канале!',cta:'СМОТРЕТЬ',media:'VID_20241031_221426_680%20(2).mp4',isVideo:true},
+  {title:'НЕВЕРОЯТНОЕ ВИДЕО',desc:'Меллстрой распаковал новую машину в прямом эфире!',cta:'СМОТРЕТЬ',media:'generated_video_08bb9c1c-5c47-47bc-a307-8fb4e44fd2a6.mp4',isVideo:true},
 ];
+
 function getRandomAd(){
-  // 70% - обычные рекламы, 10% - промокоды, 20% - видео
   const rand=Math.random();
   if(rand<0.7)return floatingAdDataNonPromo[Math.floor(Math.random()*floatingAdDataNonPromo.length)];
   else if(rand<0.8)return floatingAdDataPromo[Math.floor(Math.random()*floatingAdDataPromo.length)];
   else return floatingAdDataVideo[Math.floor(Math.random()*floatingAdDataVideo.length)];
 }
-
 function createFloatingAd(){
   const adInfo=getRandomAd();
   const el=document.createElement('div');el.className='floating-ad';
@@ -1849,11 +1796,12 @@ function createFloatingAd(){
   el.style.left=posX+'px';el.style.top=posY+'px';
   let mediaHtml='';
   if(adInfo.isPromo){
-    mediaHtml=`<div style="background:linear-gradient(135deg,rgba(251,191,36,.2),rgba(180,100,0,.3));height:160px;display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue',cursive;font-size:28px;color:#ffd700;letter-spacing:6px;text-shadow:0 0 20px rgba(255,215,0,.8);padding:10px;text-align:center">ПРОМОКОД</div>`;
-  } else if(adInfo.isVideo){
-    mediaHtml=`<video class="floating-ad-media" src="${adInfo.media}" autoplay playsinline loop muted></video>`;
-  } else if(adInfo.media){
-    mediaHtml=`<img class="floating-ad-media" src="${adInfo.media}" alt="" onerror="this.style.background='#1a0530'">`;
+    mediaHtml=`<div style="background:linear-gradient(135deg,rgba(251,191,36,.2),rgba(180,100,0,.3));height:120px;display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue',cursive;font-size:28px;color:#ffd700;letter-spacing:6px;text-align:center">ПРОМОКОД</div>`;
+  }else if(adInfo.isVideo){
+    // Видео в рекламе: muted для автовоспроизведения, без звука
+    mediaHtml=`<video class="floating-ad-media" src="${adInfo.media}" autoplay playsinline loop muted style="height:180px;object-fit:contain;background:rgba(0,0,0,.4);" onerror="this.style.display='none'"></video>`;
+  }else if(adInfo.media){
+    mediaHtml=`<img class="floating-ad-media" src="${adInfo.media}" alt="" onerror="this.style.background='#1a0530';this.style.minHeight='80px'">`;
   }
   el.innerHTML=`<div class="floating-ad-header"><span>РЕКЛАМА · MELLSTROY</span><button class="floating-ad-close">X</button></div>${mediaHtml}<div class="floating-ad-body"><div class="floating-ad-title">${adInfo.title}</div><div class="floating-ad-desc">${adInfo.desc}</div><button class="floating-ad-cta">${adInfo.cta}</button></div>`;
   document.body.appendChild(el);
@@ -1880,17 +1828,9 @@ function createFloatingAd(){
   });
 }
 function scheduleAd(){
-  const adInfo=getRandomAd();
-  // Видео рекламы появляются чаще (каждые 25-30 сек), остальные - реже (каждые 45-55 сек)
-  const waitMs=adInfo.isVideo?(25000+Math.random()*5000):(45000+Math.random()*10000);
+  const waitMs=45000+Math.random()*15000;
   setTimeout(()=>{createFloatingAd();scheduleAd();},waitMs);
 }
-
-// ============================================================
-// INIT
-// ============================================================
-document.addEventListener('click',()=>{audioUnlocked=true;},{once:true});
-document.querySelectorAll('audio').forEach(a=>a.volume=masterVolume);
 
 // ============================================================
 // PROFILE SYSTEM
@@ -1905,28 +1845,17 @@ const ACHIEVEMENTS=[
   {id:'trader',code:'TRD',name:'Трейдер',desc:'Сделай 20 торговых сделок',check:()=>getStatValue('trades')>=20},
   {id:'legend',code:'LVL10',name:'Легенда',desc:'Достигни уровня 10',check:()=>getStatValue('level')>=10},
 ];
-
-let playerStats={
-  gamesPlayed:0,slotsWins:0,slotsLosses:0,winStreak:0,playTime:0,maxWin:0,plinkoWins:0,trades:0,level:1,
-  avatar:'845b0454aba743dc34edc78901876f1b.png',banner:'',dailyGiftTime:0
-};
-function getDefaultPlayerStats(){
-  return {gamesPlayed:0,slotsWins:0,slotsLosses:0,winStreak:0,playTime:0,maxWin:0,plinkoWins:0,trades:0,level:1,avatar:'845b0454aba743dc34edc78901876f1b.png',banner:'',dailyGiftTime:0};
-}
-
+let playerStats={gamesPlayed:0,slotsWins:0,slotsLosses:0,winStreak:0,playTime:0,maxWin:0,plinkoWins:0,trades:0,level:1,avatar:'845b0454aba743dc34edc78901876f1b.png',banner:'',dailyGiftTime:0};
+function getDefaultPlayerStats(){return{gamesPlayed:0,slotsWins:0,slotsLosses:0,winStreak:0,playTime:0,maxWin:0,plinkoWins:0,trades:0,level:1,avatar:'845b0454aba743dc34edc78901876f1b.png',banner:'',dailyGiftTime:0};}
 function loadPlayerStats(){
-  const db=getDB();if(!db.playerStats)db.playerStats={};
-  playerStats={...getDefaultPlayerStats(),...(db.playerStats[currentUser]||{})};
-  savePlayerStats();
+  if(!currentUser)return;const db=getDB();if(!db.playerStats)db.playerStats={};
+  const saved=db.playerStats[currentUser];playerStats={...getDefaultPlayerStats(),...(saved||{})};savePlayerStats();
 }
 function savePlayerStats(){
-  const db=getDB();if(!db.playerStats)db.playerStats={};
-  db.playerStats[currentUser]=playerStats;
-  saveDB(db);
+  if(!currentUser)return;const db=getDB();if(!db.playerStats)db.playerStats={};
+  db.playerStats[currentUser]=playerStats;saveDB(db);
 }
-
 function getStatValue(key){return playerStats[key]||0;}
-
 let playerStatsTimer=null;
 function startPlayerStatsTimer(){
   if(playerStatsTimer)return;
@@ -1937,139 +1866,110 @@ function startPlayerStatsTimer(){
     if(document.getElementById('page-profile').classList.contains('active'))updateProfile();
   },1000);
 }
-function recalcPlayerLevel(){
-  const activity=(playerStats.gamesPlayed||0)+(playerStats.trades||0);
-  playerStats.level=Math.max(1,Math.floor(activity/25)+1);
-}
+function recalcPlayerLevel(){const activity=(playerStats.gamesPlayed||0)+(playerStats.trades||0);playerStats.level=Math.max(1,Math.floor(activity/25)+1);}
 function recordGameResult(game,won,mult=0){
   playerStats.gamesPlayed=(playerStats.gamesPlayed||0)+1;
   if(game==='plinko'&&won)playerStats.plinkoWins=(playerStats.plinkoWins||0)+1;
-  if(game==='slots'){
-    if(won)playerStats.slotsWins=(playerStats.slotsWins||0)+1;
-    else playerStats.slotsLosses=(playerStats.slotsLosses||0)+1;
-  }
+  if(game==='slots'){if(won)playerStats.slotsWins=(playerStats.slotsWins||0)+1;else playerStats.slotsLosses=(playerStats.slotsLosses||0)+1;}
   playerStats.winStreak=won?(playerStats.winStreak||0)+1:0;
   playerStats.maxWin=Math.max(playerStats.maxWin||0,mult||0);
-  recalcPlayerLevel();
-  savePlayerStats();
-  updateProfile();
+  recalcPlayerLevel();savePlayerStats();
+  if(document.getElementById('page-profile').classList.contains('active'))updateProfile();
 }
-function recordTrade(){
-  playerStats.trades=(playerStats.trades||0)+1;
-  recalcPlayerLevel();
-  savePlayerStats();
-  updateProfile();
-}
-
+function recordTrade(){playerStats.trades=(playerStats.trades||0)+1;recalcPlayerLevel();savePlayerStats();}
 function updateProfile(){
-  document.getElementById('profileUsername').textContent=currentUser.toUpperCase();
-  document.getElementById('navUsername').textContent=currentUser.toUpperCase();
-  document.getElementById('profileAvatar').src=playerStats.avatar;
-  document.getElementById('navAvatar').src=playerStats.avatar;
-  const banner=document.getElementById('profileBanner');
-  const bannerPlaceholder=document.getElementById('bannerPlaceholder');
-  if(playerStats.banner){
-    banner.src=playerStats.banner;
-    banner.style.display='block';
-    bannerPlaceholder.style.display='none';
-  } else {
-    banner.removeAttribute('src');
-    banner.style.display='none';
-    bannerPlaceholder.style.display='';
-  }
-  
-  document.getElementById('profileLevel').textContent='\u0423\u0440\u043e\u0432\u0435\u043d\u044c '+getStatValue('level');
-  document.getElementById('profileBalance').textContent=balance.toLocaleString('ru')+' \u20bd';
-  document.getElementById('statLevelVal').textContent=getStatValue('level');
-  document.getElementById('statFavGame').textContent=getStatValue('plinkoWins')>getStatValue('slotsWins')?'Plinko':'Slots';
-  document.getElementById('statGamesPlayed').textContent=getStatValue('gamesPlayed');
-  document.getElementById('statWins').textContent=getStatValue('slotsWins')+getStatValue('plinkoWins');
-  document.getElementById('statLosses').textContent=getStatValue('slotsLosses');
-  document.getElementById('statWinStreak').textContent=getStatValue('winStreak');
-  
-  const hours=Math.floor(getStatValue('playTime')/3600);const mins=Math.floor((getStatValue('playTime')%3600)/60);
-  document.getElementById('statPlayTime').textContent=hours+'\u0447 '+mins+'\u043c';
-  
-  const rubleSec=mellOwned?mellIncome:0;
-  document.getElementById('statRubleSec').textContent=rubleSec;
-  
-  updateAchievements();
-  updateDailyGift();
+  try{
+    if(!currentUser)return;
+    const pu=document.getElementById('profileUsername');const nu=document.getElementById('navUsername');
+    if(pu)pu.textContent=currentUser.toUpperCase();if(nu)nu.textContent=currentUser.toUpperCase();
+    const pa=document.getElementById('profileAvatar');const na=document.getElementById('navAvatar');
+    if(pa)pa.src=playerStats.avatar||'845b0454aba743dc34edc78901876f1b.png';
+    if(na)na.src=playerStats.avatar||'845b0454aba743dc34edc78901876f1b.png';
+    const banner=document.getElementById('profileBanner');const bp=document.getElementById('bannerPlaceholder');
+    if(banner&&bp){if(playerStats.banner){banner.src=playerStats.banner;banner.style.display='block';bp.style.display='none';}else{banner.removeAttribute('src');banner.style.display='none';bp.style.display='';}}
+    const pl=document.getElementById('profileLevel');const pb=document.getElementById('profileBalance');
+    if(pl)pl.textContent='Уровень '+getStatValue('level');if(pb)pb.textContent=balance.toLocaleString('ru')+' ₽';
+    const ids={statLevelVal:getStatValue('level'),statFavGame:getStatValue('plinkoWins')>getStatValue('slotsWins')?'Plinko':'Slots',statGamesPlayed:getStatValue('gamesPlayed'),statWins:getStatValue('slotsWins')+getStatValue('plinkoWins'),statLosses:getStatValue('slotsLosses'),statWinStreak:getStatValue('winStreak'),statRubleSec:mellIncome||0};
+    Object.entries(ids).forEach(([id,val])=>{const el=document.getElementById(id);if(el)el.textContent=val;});
+    const pt=document.getElementById('statPlayTime');if(pt){const h=Math.floor(getStatValue('playTime')/3600);const m=Math.floor((getStatValue('playTime')%3600)/60);pt.textContent=h+'ч '+m+'м';}
+    updateAchievements();updateDailyGift();
+  }catch(e){console.log('Profile error:',e);}
 }
-
 function updateAchievements(){
-  const list=document.getElementById('achievementsList');list.innerHTML='';
-  ACHIEVEMENTS.forEach(ach=>{
+  const list=document.getElementById('achievementsList');if(!list)return;list.innerHTML='';
+  const icons=['🏆','💰','⚙️','🍀','⚡','🎯','📈','👑'];
+  ACHIEVEMENTS.forEach((ach,idx)=>{
     const unlocked=ach.check();
-    const div=document.createElement('div');div.className='achievement-item';if(!unlocked)div.classList.add('achievement-locked');
-    div.innerHTML=`<div class="achievement-code">${ach.code}</div><div class="achievement-name">${ach.name}</div><div class="achievement-desc">${ach.desc}</div>`;
+    const div=document.createElement('div');div.className='achievement-item'+(unlocked?'':' achievement-locked');
+    div.innerHTML=`<div class="achievement-code">${ach.code}</div><div class="achievement-name">${unlocked?'✓ ':''} ${ach.name}</div><div class="achievement-desc">${ach.desc}</div>`;
     list.appendChild(div);
   });
 }
-
 function updateDailyGift(){
   const now=Date.now();const dayMs=24*60*60*1000;const lastTime=playerStats.dailyGiftTime||0;
   const canClaim=(now-lastTime)>=dayMs;
-  if(canClaim){
-    document.getElementById('dailyStatus').textContent='\u041e\u0442\u043a\u0440\u043e\u0439 \u043f\u043e\u0434\u0430\u0440\u043e\u043a!';
-    document.getElementById('dailyBtn').style.display='block';
-    document.getElementById('dailyTime').textContent='';
-  } else {
-    const msLeft=dayMs-(now-lastTime);const hLeft=Math.floor(msLeft/3600000);const mLeft=Math.floor((msLeft%3600000)/60000);
-    document.getElementById('dailyStatus').textContent='\u041f\u0440\u0438\u0445\u043e\u0434\u0438 \u0437\u0430\u0432\u0442\u0440\u0430!';
-    document.getElementById('dailyBtn').style.display='none';
-    document.getElementById('dailyTime').textContent='\u0427\u0435\u0440\u0435\u0437 '+hLeft+'\u0447 '+mLeft+'\u043c';
-  }
+  if(canClaim){document.getElementById('dailyStatus').textContent='Открой подарок!';document.getElementById('dailyBtn').style.display='block';document.getElementById('dailyTime').textContent='';}
+  else{const msLeft=dayMs-(now-lastTime);const hLeft=Math.floor(msLeft/3600000);const mLeft=Math.floor((msLeft%3600000)/60000);document.getElementById('dailyStatus').textContent='Приходи завтра!';document.getElementById('dailyBtn').style.display='none';document.getElementById('dailyTime').textContent='Через '+hLeft+'ч '+mLeft+'м';}
 }
-
 function claimDailyGift(){
-  const gift=Math.floor(1000+Math.random()*5000);
-  balance+=gift;updateBalance();playerStats.dailyGiftTime=Date.now();savePlayerStats();
-  showNotif('\u0415\u0436\u0435\u0434\u043d\u0435\u0432\u043d\u044b\u0439 \u043f\u043e\u0434\u0430\u0440\u043e\u043a: +'+gift+' \u20bd','win');updateProfile();
+  const gift=Math.floor(1000+Math.random()*5000);balance+=gift;updateBalance();playerStats.dailyGiftTime=Date.now();savePlayerStats();
+  showNotif('Ежедневный подарок: +'+gift+' ₽','win');updateProfile();
 }
-
 function changeAvatar(e){
   const file=e.target.files[0];if(!file)return;
-  const reader=new FileReader();reader.onload=ev=>{
-    playerStats.avatar=ev.target.result;savePlayerStats();updateProfile();
-  };reader.readAsDataURL(file);
+  if(file.size>1.5*1024*1024){showNotif('Слишком большая картинка! До 1.5 МБ','lose');return;}
+  const reader=new FileReader();reader.onload=ev=>{try{playerStats.avatar=ev.target.result;savePlayerStats();updateProfile();}catch(err){showNotif('Не удалось сохранить аватар','lose');}};reader.readAsDataURL(file);
 }
-
 function changeBanner(e){
   const file=e.target.files[0];if(!file)return;
-  const reader=new FileReader();reader.onload=ev=>{
-    playerStats.banner=ev.target.result;savePlayerStats();updateProfile();
-    document.getElementById('bannerPlaceholder').style.display='none';
-  };reader.readAsDataURL(file);
+  if(file.size>1.5*1024*1024){showNotif('Слишком большой баннер! До 1.5 МБ','lose');return;}
+  const reader=new FileReader();reader.onload=ev=>{try{playerStats.banner=ev.target.result;savePlayerStats();updateProfile();document.getElementById('bannerPlaceholder').style.display='none';}catch(err){showNotif('Не удалось сохранить баннер','lose');}};reader.readAsDataURL(file);
 }
-
 function showProfileTab(tab){
-  document.querySelectorAll('.profile-tab').forEach(t=>t.classList.remove('active'));
-  document.querySelectorAll('.profile-tab-content').forEach(c=>c.style.display='none');
-  document.querySelector(`[onclick="showProfileTab('${tab}')"]`).classList.add('active');
-  document.getElementById('profile-tab-'+tab).style.display='block';
+  try{
+    document.querySelectorAll('.profile-tab').forEach(t=>t.classList.remove('active'));
+    document.querySelectorAll('.profile-tab-content').forEach(c=>c.style.display='none');
+    const btn=document.querySelector(`[onclick="showProfileTab('${tab}')"]`);if(btn)btn.classList.add('active');
+    const content=document.getElementById('profile-tab-'+tab);if(content)content.style.display='block';
+    if(tab==='achievements')updateAchievements();
+    if(tab==='daily')updateDailyGift();
+  }catch(e){console.log('Tab switch error:',e);}
 }
 
-// Трекинг статистики при обновлении баланса
-const originalUpdateBalance=updateBalance;
-updateBalance=function(){
-  originalUpdateBalance();
-  savePlayerStats();
-  updateProfile();
-};
+// ============================================================
+// ГЛАВНЫЙ ИНИЦИАЛИЗАТОР
+// Разблокировка аудио происходит при ПЕРВОМ КЛИКЕ пользователя.
+// Это единственный надёжный способ заставить аудио работать
+// в любом браузере, включая мобильные.
+// ============================================================
 
-// ============================================================
-// INIT
-// ============================================================
-const savedUser=getCurrentUser();
-if(savedUser){
-  const db=getDB();
-  if(db.users[savedUser]){
-    currentUser=savedUser;
-    loadPlayerStats();
-    startSession();
-    updateProfile();
+// Слушаем первый клик для разблокировки аудио
+document.addEventListener('click', function onFirstClick() {
+  unlockAudio();
+  document.removeEventListener('click', onFirstClick);
+}, { capture: true });
+
+// Также разблокируем при touchstart (мобильные)
+document.addEventListener('touchstart', function onFirstTouch() {
+  unlockAudio();
+  document.removeEventListener('touchstart', onFirstTouch);
+}, { capture: true, once: true });
+
+// Старт при загрузке
+try{
+  const savedUser=getCurrentUser();
+  if(savedUser){
+    const db=getDB();
+    if(db.users[savedUser]){
+      currentUser=savedUser;
+      loadPlayerStats();
+      startPlayerStatsTimer();
+      startSession();
+      updateProfile();
+    }
   }
+}catch(e){
+  console.error('Init error:',e);
 }
 </script>
 </body>
